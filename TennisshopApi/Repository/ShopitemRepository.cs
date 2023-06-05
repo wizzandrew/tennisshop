@@ -38,6 +38,9 @@ public class ShopitemRepository : IShopitemRepository
         {
 
             // get accessory,clothings,shoes,rackets objects from new arrivals
+            // map through array of Items(ShopItem -> base class) from newArrival
+            // check Item's Id with the Id of Accessory, Clothing, Shoes, Racket
+            // in case of a match add the Item to according List 
             for (int i = 0; i < newArrival.Items.Count; i++)
             {
                 var accessory = _context.Accessories.Where(a => a.Id == newArrival.Items.ElementAt(i).Id).FirstOrDefault();
@@ -84,6 +87,9 @@ public class ShopitemRepository : IShopitemRepository
     public ShopArticles GetTopSellers()
     {
         // get the latest list with top seller articles
+        // map through array of Items(ShopItem -> base class) from topSeller
+        // check Item's Id with the Id of Accessory, Clothing, Shoes, Racket
+        // in case of a match add the Item to according List 
         var topSeller = _context.TopSellers.Include(s => s.Items).OrderBy(s => s.Id).LastOrDefault();
 
         var accessories = new List<Accessory>();

@@ -34,6 +34,11 @@ public class ShopitemController : Controller
             return BadRequest(ModelState);
         }
 
+        if (newArrivals == null)
+        {
+            return NotFound();
+        }
+
         return Ok(newArrivals);
     }
 
@@ -45,6 +50,11 @@ public class ShopitemController : Controller
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
+        }
+
+        if (topSellers == null)
+        {
+            return NotFound();
         }
 
         return Ok(topSellers);
