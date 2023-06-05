@@ -1,5 +1,6 @@
-public interface IShopitemRepository{
+public interface IShopitemRepository
+{
     public ShopArticles GetShopItems();
-    // public ICollection<ShopItem> GetNewArrivals();
-    // public ICollection<ShopItem> GetTopSellers();
+    public ShopArticles GetNewArrivals();
+    public ShopArticles GetTopSellers();
 }
