@@ -142,6 +142,14 @@ namespace TennisshopApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -263,14 +271,17 @@ namespace TennisshopApi.Migrations
                 {
                     b.HasBaseType("ShopItem");
 
-                    b.Property<int>("GripSize")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("GripSize")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("HeadSize")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("HeadSize")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<double>("Weight")
-                        .HasColumnType("REAL");
+                    b.Property<string>("Weight")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.ToTable("Rackets");
                 });
@@ -286,8 +297,9 @@ namespace TennisshopApi.Migrations
                     b.Property<bool>("Gender")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Size")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Size")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.ToTable("Shoes");
                 });

@@ -108,6 +108,8 @@ namespace TennisshopApi.Migrations
                     Quantity = table.Column<int>(type: "INTEGER", nullable: false),
                     Rating = table.Column<double>(type: "REAL", nullable: false),
                     Popular = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Img = table.Column<string>(type: "TEXT", nullable: false),
                     NewArrivalsId = table.Column<int>(type: "INTEGER", nullable: true),
                     TopSellerId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
@@ -197,9 +199,9 @@ namespace TennisshopApi.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Weight = table.Column<double>(type: "REAL", nullable: false),
-                    HeadSize = table.Column<int>(type: "INTEGER", nullable: false),
-                    GripSize = table.Column<int>(type: "INTEGER", nullable: false)
+                    Weight = table.Column<string>(type: "TEXT", nullable: false),
+                    HeadSize = table.Column<string>(type: "TEXT", nullable: false),
+                    GripSize = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -220,7 +222,7 @@ namespace TennisshopApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Gender = table.Column<bool>(type: "INTEGER", nullable: false),
                     Color = table.Column<string>(type: "TEXT", nullable: false),
-                    Size = table.Column<int>(type: "INTEGER", nullable: false)
+                    Size = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

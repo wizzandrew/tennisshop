@@ -7,4 +7,6 @@ public  class ShopItem {
     public int Quantity { get; set; }
     public double Rating { get; set; }
     public bool Popular { get; set; }
+    public string Description {get; set;}
+    public string Img {get; set;}
 }

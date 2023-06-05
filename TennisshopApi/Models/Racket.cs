@@ -1,6 +1,7 @@
-public class Racket: ShopItem {
-    public double Weight { get; set; }
-    public int HeadSize { get; set; }
-    public int GripSize { get; set; }
+public class Racket : ShopItem
+{
+    public string Weight { get; set; }
+    public string HeadSize { get; set; }
+    public string GripSize { get; set; }
 
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\TennisshopApi.csproj": {}
+    "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\TennisshopApi.csproj": {}
   },
   "projects": {
-    "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\TennisshopApi.csproj": {
+    "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\TennisshopApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\TennisshopApi.csproj",
+        "projectUniqueName": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\TennisshopApi.csproj",
         "projectName": "TennisshopApi",
-        "projectPath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\TennisshopApi.csproj",
+        "projectPath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\TennisshopApi.csproj",
         "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
-        "outputPath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\obj\\",
+        "outputPath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
