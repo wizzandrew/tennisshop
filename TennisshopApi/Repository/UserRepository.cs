@@ -13,4 +13,20 @@ public class UserRepository : IUserRepository
         return _context.Users.Include(u => u.Address).Include(u => u.PaymentMethod).FirstOrDefault();
     }
 
+    public bool CreateOrder(Order order)
+    {
+        var orderExists = _context.Orders.Where(o => o.OrderNo == order.OrderNo).Any();
+
+        if (orderExists)
+        {
+            return false;
+        }
+        else
+        {
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+            return true;
+        }
+    }
+
 }

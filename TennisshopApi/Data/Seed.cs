@@ -69,8 +69,17 @@ public class Seed
             Valid = new DateTime(2025, 12, 31)
         };
 
+        // user
+        User user = new User()
+        {
+            Name = "Fernando de Silva",
+            Email = "fernandosilva@gmail.com",
+            Address = address,
+            PaymentMethod = paymentMethod
+        };
+
         // order
-        Order order = new Order()
+        Order order = new Order
         {
             OrderNo = "Ord235698",
             Date = new DateTime(2023, 3, 27),
@@ -85,18 +94,11 @@ public class Seed
                     Item = clothings[0],
                     Quantity = 1
                 }
-            }
+            },
+            User = user
         };
 
-        // user
-        User user = new User()
-        {
-            Name = "Fernando de Silva",
-            Email = "fernandosilva@gmail.com",
-            Address = address,
-            OrderHistory = new List<Order>() { order },
-            PaymentMethod = paymentMethod
-        };
+
 
 
         // add data to context

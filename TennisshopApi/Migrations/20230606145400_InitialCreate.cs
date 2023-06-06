@@ -138,7 +138,7 @@ namespace TennisshopApi.Migrations
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Total = table.Column<double>(type: "REAL", nullable: false),
                     OrderStatus = table.Column<string>(type: "TEXT", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: true)
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -147,7 +147,8 @@ namespace TennisshopApi.Migrations
                         name: "FK_Orders_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

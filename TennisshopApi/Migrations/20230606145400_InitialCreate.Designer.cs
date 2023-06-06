@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TennisshopApi.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230605144807_InitialCreate")]
+    [Migration("20230606145400_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -80,7 +80,7 @@ namespace TennisshopApi.Migrations
                     b.Property<double>("Total")
                         .HasColumnType("REAL");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -309,9 +309,13 @@ namespace TennisshopApi.Migrations
 
             modelBuilder.Entity("Order", b =>
                 {
-                    b.HasOne("User", null)
-                        .WithMany("OrderHistory")
-                        .HasForeignKey("UserId");
+                    b.HasOne("User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("OrderItem", b =>
@@ -408,11 +412,6 @@ namespace TennisshopApi.Migrations
             modelBuilder.Entity("TopSeller", b =>
                 {
                     b.Navigation("Items");
-                });
-
-            modelBuilder.Entity("User", b =>
-                {
-                    b.Navigation("OrderHistory");
                 });
 #pragma warning restore 612, 618
         }
