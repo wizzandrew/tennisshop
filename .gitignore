@@ -2,3 +2,7 @@
 TennisshopApi/bin/Debug/net6.0
 TennisshopApi/obj/Debug/net6.0
 TennisshopApi/obj/staticwebassets.pack.sentinel
+
+# frontend
+
+vueClient/node_modules
