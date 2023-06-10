@@ -69,58 +69,58 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .mainlinksNav {
   padding-bottom: 20px;
-}
 
-.mainlinksNavBrand {
-  margin-left: 100px;
+  .mainlinksNavBrand {
+    margin-left: 100px;
+  }
+
+  .search {
+    margin-left: 100px;
+    max-width: fit-content;
+
+    form input {
+      min-width: 350px;
+    }
+  }
+
+  .userThings {
+    margin-left: 50px;
+    display: flex;
+
+    div {
+      padding: 0 10px;
+    }
+
+    a {
+      color: black;
+    }
+  }
 }
 
 .container-fluid {
   justify-content: flex-start !important;
 }
 
-.search {
-  margin-left: 100px;
-  max-width: fit-content;
-}
-
-.search form input {
-  min-width: 350px;
-}
-
-.userThings {
-  margin-left: 50px;
-  display: flex;
-}
-
-.userThings div {
-  padding: 0 10px;
-}
-
-.userThings a {
-  color: black;
-}
-
 .sublinksNav {
   border-top: 2px solid #eee;
   border-bottom: 2px solid #eee;
   max-height: 40px;
-}
 
-#navbarSupportedContent {
-  display: flex;
-  justify-content: center;
-}
+  #navbarSupportedContent {
+    display: flex;
+    justify-content: center;
+  }
 
-.subHeader {
-  margin-right: 0 !important;
-}
+  .subHeader {
+    margin-right: 0 !important;
 
-.subHeader li {
-  font-weight: 600;
-  padding: 0 10px;
+    li {
+      font-weight: 600;
+      padding: 0 10px;
+    }
+  }
 }
 </style>
