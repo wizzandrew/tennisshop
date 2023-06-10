@@ -1,16 +1,13 @@
 <template>
   <div class="app">
-    <nav>
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
+    <div>
+      <Header />
+    </div>
 
     <RouterView />
   </div>
 </template>
 
-<style>
-.app {
-  text-align: center;
-}
-</style>
+<script setup>
+import Header from "./components/Header.vue";
+</script>
