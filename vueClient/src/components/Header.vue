@@ -3,26 +3,34 @@
     <div class="container">
       <nav class="navbar mainlinksNav">
         <div class="container-fluid">
-          <a class="navbar-brand mainlinksNavBrand" href="/">Brand logo</a>
+          <a class="navbar-brand mainlinksNavBrand" href="/"
+            ><img src="../img/tennisshop-logo.svg" alt="brand"
+          /></a>
           <div class="search">
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder=""
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-secondary" type="submit">
                 Search
               </button>
             </form>
           </div>
           <div class="userThings">
-            <div>
-              <a href="/my-account">My Account</a>
+            <div class="userThing">
+              <a href="/my-account">
+                <img src="../img/account-icon.svg" alt="account" />
+                <p>My Account</p>
+              </a>
             </div>
-            <div>
-              <a href="/cart">Cart</a>
+            <div class="userThing">
+              <a href="/cart">
+                <img src="../img/cart-icon.svg" alt="cart" />
+                <p>Cart</p>
+              </a>
             </div>
           </div>
         </div>
@@ -70,15 +78,17 @@
 </template>
 
 <style lang="scss">
+@import "../assets/mixins";
+
 .mainlinksNav {
   padding-bottom: 20px;
 
   .mainlinksNavBrand {
     margin-left: 100px;
+    margin-right: 100px;
   }
 
   .search {
-    margin-left: 100px;
     max-width: fit-content;
 
     form input {
@@ -90,12 +100,29 @@
     margin-left: 50px;
     display: flex;
 
-    div {
-      padding: 0 10px;
-    }
+    .userThing {
+      padding: 0 20px;
 
-    a {
-      color: black;
+      a {
+        @include displayFlex(column);
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+
+        img {
+          width: 22.4px;
+          height: 22.4px;
+          margin: 0 auto;
+        }
+
+        p {
+          margin-bottom: 0px;
+        }
+
+        &:last-child img {
+          transform: rotateY(180deg);
+        }
+      }
     }
   }
 }
@@ -118,8 +145,13 @@
     margin-right: 0 !important;
 
     li {
+      @include underlineEffect();
       font-weight: 600;
       padding: 0 10px;
+
+      &:hover {
+        @include underlineEffectHover();
+      }
     }
   }
 }
