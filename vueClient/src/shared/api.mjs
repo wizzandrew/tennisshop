@@ -31,4 +31,36 @@ async function getNewArrivals() {
 
 }
 
-export { getNewArrivals }
+
+async function getTopSellers() {
+
+    // variables for json response and result
+    let response;
+    let result;
+
+    try {
+        response = await fetch(URL + "Shopitem/topsellers");
+    } catch (error) {
+        console.log("getTopSellers " + error);
+    }
+
+    if (response !== undefined) {
+        if (response.ok) {
+            await response
+                .json()
+                .then((data) => (result = data))
+                .catch((err) => console.log(err));
+
+            // return json result
+            return result;
+        } else {
+            throw new Error("\nStatus: " + response.status + " " + response.statusText);
+        }
+    }
+    else {
+        return null;
+    }
+
+}
+
+export { getNewArrivals, getTopSellers }

@@ -102,20 +102,29 @@
   <div class="underLine"></div>
 
   <div class="container">
-    <Slider />
+    <NewArrivalsSlider />
   </div>
 
-  <div class="topSellersHolder">
-    <h1>Top Sellers</h1>
-    <br />
+  <div class="container">
+    <div class="topSellersHeading">
+      <h2><span>TOP SELLERS</span></h2>
+    </div>
+  </div>
+
+  <div class="underLine"></div>
+
+  <div class="container">
+    <TopSellersSlider />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onUpdated } from "vue";
+import { storeToRefs } from "pinia";
 import { shopStore } from "../stores/shop";
 import * as api from "../shared/api.mjs";
-import Slider from "../components/Slider.vue";
+import NewArrivalsSlider from "../components/NewArrivalsSlider.vue";
+import TopSellersSlider from "../components/TopSellersSlider.vue";
 
 // pinia
 const store = shopStore();
@@ -126,12 +135,28 @@ onMounted(async () => {
     const arrivals = await api.getNewArrivals();
     if (arrivals !== undefined && arrivals !== null) {
       store.setNewArrivals(arrivals);
-      console.log(arrivals);
+      console.log("new arrivals ", arrivals);
     }
   } catch (error) {
     console.log(error);
   }
+
+  try {
+    const sellers = await api.getTopSellers();
+    if (sellers !== undefined && sellers !== null) {
+      store.setTopSellers(sellers);
+      console.log("top sellers ", sellers);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  // console.log("home mounted", newArrivalItems);
 });
+
+// onUpdated(() => {
+//   console.log("home updated", newArrivalItems);
+// });
 </script>
 
 <style lang="scss">
@@ -163,5 +188,20 @@ onMounted(async () => {
 .underLine {
   border-bottom: 3px solid #eee;
   margin-bottom: 30px;
+}
+
+.topSellersHeading {
+  padding-top: 100px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin: 0;
+
+    span {
+      border-bottom: 3px solid #ffed00;
+    }
+  }
 }
 </style>

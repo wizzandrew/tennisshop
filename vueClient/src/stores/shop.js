@@ -5,38 +5,14 @@ export const shopStore = defineStore('sjop', () => {
 
     //state
     const newArrivals = ref();
+    const topSellers = ref();
 
-    //computes
+    //computed
     const newArrivalItems = computed(() => {
-        const items = [];
-
-        if (newArrivals.value !== undefined) {
-            if (newArrivals.value.accessories !== undefined && Array.isArray(newArrivals.value.accessories)) {
-                newArrivals.value.accessories.map(acc => {
-                    items.push(acc);
-                })
-            }
-
-            if (newArrivals.value.clothings !== undefined && Array.isArray(newArrivals.value.clothings)) {
-                newArrivals.value.clothings.map(cloth => {
-                    items.push(cloth);
-                })
-            }
-
-            if (newArrivals.value.shoes !== undefined && Array.isArray(newArrivals.value.shoes)) {
-                newArrivals.value.shoes.map(shoe => {
-                    items.push(shoe);
-                })
-            }
-
-            if (newArrivals.value.rackets !== undefined && Array.isArray(newArrivals.value.rackets)) {
-                newArrivals.value.rackets.map(racket => {
-                    items.push(racket);
-                })
-            }
-        }
-
-        return items;
+        return shopItemsToArray(newArrivals.value);
+    });
+    const topSellersItems = computed(() => {
+        return shopItemsToArray(topSellers.value);
     });
 
     //methods
@@ -44,5 +20,44 @@ export const shopStore = defineStore('sjop', () => {
         newArrivals.value = arrivals;
     }
 
-    return { newArrivals, newArrivalItems, setNewArrivals }
+    function setTopSellers(sellers) {
+        topSellers.value = sellers;
+    }
+
+    //private functions
+    //build an array of everything: accessories + clothings + shoes + rackets
+    function shopItemsToArray(shopItems) {
+        const items = [];
+
+        if (shopItems !== undefined) {
+            if (shopItems.accessories !== undefined && Array.isArray(shopItems.accessories)) {
+                shopItems.accessories.map(acc => {
+                    items.push(acc);
+                })
+            }
+
+            if (shopItems.clothings !== undefined && Array.isArray(shopItems.clothings)) {
+                shopItems.clothings.map(cloth => {
+                    items.push(cloth);
+                })
+            }
+
+            if (shopItems.shoes !== undefined && Array.isArray(shopItems.shoes)) {
+                shopItems.shoes.map(shoe => {
+                    items.push(shoe);
+                })
+            }
+
+            if (shopItems.rackets !== undefined && Array.isArray(shopItems.rackets)) {
+                shopItems.rackets.map(racket => {
+                    items.push(racket);
+                })
+            }
+        }
+
+        return items;
+
+    }
+
+    return { newArrivals, topSellers, newArrivalItems, topSellersItems, setNewArrivals, setTopSellers }
 })

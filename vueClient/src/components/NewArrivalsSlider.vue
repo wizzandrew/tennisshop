@@ -3,12 +3,12 @@
     <div
       class="my-slider"
       v-if="
-        store.newArrivalItems !== undefined &&
-        Array.isArray(store.newArrivalItems) &&
-        store.newArrivalItems.length > 0
+        newArrivalItems !== undefined &&
+        Array.isArray(newArrivalItems) &&
+        newArrivalItems.length > 0
       "
     >
-      <div class="slide" v-for="shopItem in store.newArrivalItems">
+      <div class="slide" v-for="shopItem in newArrivalItems">
         <div class="card">
           <img v-bind:src="shopItem.img" class="card-img-top" alt="..." />
           <div class="card-body">
@@ -19,8 +19,8 @@
               ><b>€ {{ shopItem.price }}</b></span
             >
             <span v-else
-              ><b>€ {{ shopItem.price }}</b>
-              <del>€ {{ shopItem.salePrice }}</del></span
+              ><b>€ {{ shopItem.salePrice }}</b>
+              <del>€ {{ shopItem.price }}</del></span
             >
           </div>
         </div>
@@ -40,10 +40,10 @@
 import { tns } from "tiny-slider/src/tiny-slider";
 import { onMounted, onUpdated } from "vue";
 import { shopStore } from "../stores/shop";
+import { storeToRefs } from "pinia";
 
 const store = shopStore();
-
-let slider;
+const { newArrivalItems } = storeToRefs(store);
 
 onMounted(() => {
   // check if all slides for new arrivals were loaded
@@ -52,7 +52,7 @@ onMounted(() => {
   let slides = document.getElementsByClassName("slide");
 
   if (slides.length === 8) {
-    slider = tns({
+    let slider = tns({
       container: ".my-slider",
       items: 4,
       gutter: 5,
@@ -81,7 +81,7 @@ onUpdated(() => {
   let _slides = document.getElementsByClassName("slide");
 
   if (_slides.length === 8) {
-    slider = tns({
+    let slider = tns({
       container: ".my-slider",
       items: 4,
       gutter: 5,

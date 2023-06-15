@@ -2072,7 +2072,7 @@ public class Seed
             Name = "Paris Freelift Polo Men",
             Brand = Enums.Adidas,
             Price = 70,
-            SalePrice = 453,
+            SalePrice = 45,
             Quantity = 10,
             Rating = 4.8,
             Popular = true,
