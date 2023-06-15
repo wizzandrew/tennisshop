@@ -93,10 +93,18 @@
     </div>
   </div>
 
-  <div class="newArrivalsHolder">
-    <h1>New Arrvials</h1>
-    <br />
+  <div class="container">
+    <div class="newArrivalsHeading">
+      <h2><span>NEW ARRIVALS</span></h2>
+    </div>
   </div>
+
+  <div class="underLine"></div>
+
+  <div class="container">
+    <Slider />
+  </div>
+
   <div class="topSellersHolder">
     <h1>Top Sellers</h1>
     <br />
@@ -104,11 +112,26 @@
 </template>
 
 <script setup>
-import Counter from "../components/Counter.vue";
-import { useCounterStore } from "../stores/counter";
+import { ref, computed, onMounted } from "vue";
+import { shopStore } from "../stores/shop";
+import * as api from "../shared/api.mjs";
+import Slider from "../components/Slider.vue";
 
 // pinia
-const store = useCounterStore();
+const store = shopStore();
+
+//onMounted
+onMounted(async () => {
+  try {
+    const arrivals = await api.getNewArrivals();
+    if (arrivals !== undefined && arrivals !== null) {
+      store.setNewArrivals(arrivals);
+      console.log(arrivals);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
 </script>
 
 <style lang="scss">
@@ -120,5 +143,25 @@ const store = useCounterStore();
       object-fit: cover;
     }
   }
+}
+
+.newArrivalsHeading {
+  padding-top: 75px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin: 0;
+
+    span {
+      border-bottom: 3px solid #cf102d;
+    }
+  }
+}
+
+.underLine {
+  border-bottom: 3px solid #eee;
+  margin-bottom: 30px;
 }
 </style>
