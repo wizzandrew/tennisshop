@@ -1,10 +1,14 @@
+$theYellow: #ffed00;
+$theRed: #cf102d;
+$theBlue: #19b9ff;
+
 @mixin displayFlex($flexDirection) {
   display: flex;
   flex-direction: $flexDirection;
 }
 
 @mixin underlineEffect() {
-  background-image: linear-gradient(#ffed00 0 0);
+  background-image: linear-gradient($theYellow 0 0);
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 3px;
   background-repeat: no-repeat;

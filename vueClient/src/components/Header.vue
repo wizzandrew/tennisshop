@@ -78,7 +78,7 @@
 </template>
 
 <style lang="scss">
-@import "../assets/mixins";
+@import "../assets/_sass";
 
 .mainlinksNav {
   padding-bottom: 20px;
