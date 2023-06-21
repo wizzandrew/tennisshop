@@ -309,6 +309,18 @@ const store = shopStore();
 
 //onMounted
 onMounted(async () => {
+  //fetching shop items
+  try {
+    const shopitems = await api.getShopItems();
+    if (shopitems !== undefined && shopitems !== null) {
+      store.setShopItems(shopitems);
+      console.log("shop items ", shopitems);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  //fetching new arrivals
   try {
     const arrivals = await api.getNewArrivals();
     if (arrivals !== undefined && arrivals !== null) {
@@ -319,6 +331,7 @@ onMounted(async () => {
     console.log(error);
   }
 
+  //fetching top sellers
   try {
     const sellers = await api.getTopSellers();
     if (sellers !== undefined && sellers !== null) {
@@ -328,8 +341,6 @@ onMounted(async () => {
   } catch (error) {
     console.log(error);
   }
-
-  // console.log("home mounted", newArrivalItems);
 });
 
 // onUpdated(() => {
@@ -343,7 +354,7 @@ onMounted(async () => {
 .carousel {
   .carousel-inner {
     img {
-      height: 85.1875vh;
+      height: 81vh;
       width: 100%;
       object-fit: cover;
     }

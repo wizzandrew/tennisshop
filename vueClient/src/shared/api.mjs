@@ -1,5 +1,37 @@
 import { URL } from "./utils";
 
+async function getShopItems() {
+
+    // variables for json response and result
+    let response;
+    let result;
+
+    try {
+        response = await fetch(URL + "Shopitem");
+    } catch (error) {
+        console.log("getShopItems " + error);
+    }
+
+    if (response !== undefined) {
+        if (response.ok) {
+            await response
+                .json()
+                .then((data) => (result = data))
+                .catch((err) => console.log(err));
+
+            // return json result
+            return result;
+        } else {
+            throw new Error("\nStatus: " + response.status + " " + response.statusText);
+        }
+    }
+    else {
+        return null;
+    }
+
+}
+
+
 async function getNewArrivals() {
 
     // variables for json response and result
@@ -63,4 +95,4 @@ async function getTopSellers() {
 
 }
 
-export { getNewArrivals, getTopSellers }
+export { getShopItems, getNewArrivals, getTopSellers }
