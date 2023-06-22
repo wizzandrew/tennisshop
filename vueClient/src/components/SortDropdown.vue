@@ -10,19 +10,15 @@
     </button>
     <ul class="dropdown-menu">
       <li>
-        <a class="dropdown-item" href="#" @click="sort(mostPopular)">{{
+        <a class="dropdown-item" @click="sort(mostPopular)">{{
           mostPopular
         }}</a>
       </li>
       <li>
-        <a class="dropdown-item" href="#" @click="sort(lowToHigh)">{{
-          lowToHigh
-        }}</a>
+        <a class="dropdown-item" @click="sort(lowToHigh)">{{ lowToHigh }}</a>
       </li>
       <li>
-        <a class="dropdown-item" href="#" @click="sort(highToLow)">{{
-          highToLow
-        }}</a>
+        <a class="dropdown-item" @click="sort(highToLow)">{{ highToLow }}</a>
       </li>
     </ul>
   </div>
@@ -35,11 +31,20 @@ const mostPopular = "Most popular";
 const lowToHigh = "Price low-to-high";
 const highToLow = "Price high-to-low";
 const selectedOption = ref(mostPopular);
-const emit = defineEmits([mostPopular, highToLow, lowToHigh]);
+const emit = defineEmits("select");
 
 const sort = (msg) => {
   selectedOption.value = msg;
-  //props.handleSorting(msg);
   emit("select", msg);
 };
 </script>
+
+<style>
+.dropdown-menu {
+  .dropdown-item {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+</style>

@@ -10,8 +10,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="brandState.babolat"
                 id="babolatCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -23,8 +24,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="brandState.head"
                 id="headCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -36,8 +38,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="brandState.wilson"
                 id="wilsonCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -73,7 +76,7 @@
               class="min-price"
               v-model="leftPriceSlider"
               min="50"
-              max="199"
+              max="299"
               @change="validateRange"
             />
             <input
@@ -81,7 +84,7 @@
               class="max-price"
               v-model="rightPriceSlider"
               min="51"
-              max="200"
+              max="300"
               @change="validateRange"
             />
           </div>
@@ -98,8 +101,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="weightState.smallWeight"
                 id="weightSmallCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -111,8 +115,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="weightState.mediumWeight"
                 id="weightMediumCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -124,8 +129,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="weightState.largeWeight"
                 id="weightLargeCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -147,8 +153,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="headState.smallHead"
                 id="headSizeSmallCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -162,8 +169,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="headState.mediumHead"
                 id="headSizeMediumCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -177,8 +185,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="headState.largeHead"
                 id="headSizeLargeCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -202,8 +211,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="gripSizeState.grip1"
                 id="gripSizeSmallCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -215,8 +225,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="gripSizeState.grip2"
                 id="gripSizeMediumCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -228,8 +239,9 @@
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                v-model="gripSizeState.grip3"
                 id="gripSizeLargeCheckbox"
+                @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
@@ -246,20 +258,121 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-
 const brands = ["Babolat", "HEAD", "Wilson"];
-const weight = [250, 275, 276, 258, 286, 295];
-const headSize = [600, 626, 627, 632, 633, 645];
-const gripSize = [1, 2, 3];
+const weight = ["250", "275", "276", "285", "286", "295"];
+const headSize = ["600", "626", "627", "632", "633", "645"];
+const gripSize = ["1", "2", "3"];
+
+const brandState = ref({
+  babolat: false,
+  head: false,
+  wilson: false,
+});
+
+const weightState = ref({
+  smallWeight: false,
+  mediumWeight: false,
+  largeWeight: false,
+});
+
+const headState = ref({
+  smallHead: false,
+  mediumHead: false,
+  largeHead: false,
+});
+
+const gripSizeState = ref({
+  grip1: false,
+  grip2: false,
+  grip3: false,
+});
 
 const leftPriceSlider = ref(50);
-const rightPriceSlider = ref(200);
+const rightPriceSlider = ref(300);
 
+const racketsFilterEmit = defineEmits("filter-rackets");
+
+// function constructs filter object and emits it to parent(RacketVue)
+const racketsFilter = () => {
+  // arrays to hold filter state and checkbox value
+  const brandsToFilter = [];
+  const pricesToFilter = [];
+  const weigtsToFilter = [];
+  const headsToFilter = [];
+  const gripsToFilter = [];
+
+  // brands
+  brandsToFilter.push({ name: brands[0], value: brandState.value.babolat });
+  brandsToFilter.push({ name: brands[1], value: brandState.value.head });
+  brandsToFilter.push({ name: brands[2], value: brandState.value.wilson });
+
+  // price
+  pricesToFilter.push({
+    min: leftPriceSlider.value,
+    max: rightPriceSlider.value,
+  });
+
+  // weights
+  weigtsToFilter.push({
+    min: weight[0],
+    max: weight[1],
+    value: weightState.value.smallWeight,
+  });
+  weigtsToFilter.push({
+    min: weight[2],
+    max: weight[3],
+    value: weightState.value.mediumWeight,
+  });
+  weigtsToFilter.push({
+    min: weight[4],
+    max: weight[5],
+    value: weightState.value.largeWeight,
+  });
+
+  // head sizes
+  headsToFilter.push({
+    min: headSize[0],
+    max: headSize[1],
+    value: headState.value.smallHead,
+  });
+  headsToFilter.push({
+    min: headSize[2],
+    max: headSize[3],
+    value: headState.value.mediumHead,
+  });
+  headsToFilter.push({
+    min: headSize[4],
+    max: headSize[5],
+    value: headState.value.largeHead,
+  });
+
+  // grip sizes
+  gripsToFilter.push({ grip: gripSize[0], value: gripSizeState.value.grip1 });
+  gripsToFilter.push({ grip: gripSize[1], value: gripSizeState.value.grip2 });
+  gripsToFilter.push({ grip: gripSize[2], value: gripSizeState.value.grip3 });
+
+  // construct filter object
+  const filterObject = {
+    brands: brandsToFilter,
+    prices: pricesToFilter,
+    weights: weigtsToFilter,
+    headSizes: headsToFilter,
+    gripSizes: gripsToFilter,
+  };
+
+  racketsFilterEmit("filter-rackets", filterObject);
+};
+
+// make sure left price doesnt become bigger than right price
+// e.g user grags left price across right price
 const validateRange = () => {
   if (Number(leftPriceSlider.value) > Number(rightPriceSlider.value)) {
     leftPriceSlider.value = 50;
-    rightPriceSlider.value = 200;
+    rightPriceSlider.value = 300;
   }
+
+  // call racketsFilter() to proceed to emit
+  racketsFilter();
 };
 </script>
 

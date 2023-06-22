@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-3">
-        <FilterItems />
+        <FilterItems @filter-rackets="manageFiltering" />
       </div>
       <div class="col-9">
         <div class="racketsImageBanner">
@@ -96,19 +96,23 @@ import FilterItems from "../components/FilterItems.vue";
 import { onMounted, onUpdated, computed, ref } from "vue";
 
 const store = shopStore();
+
+// initial rackets retrieved from db
 const { racketItems } = storeToRefs(store);
-const currentRackets = ref(racketItems);
+
+// current rackets to dynamicly provide rackets on the page
+const currentRackets = ref(racketItems.value);
 
 // sorts rackets by rating
 const mostPopularRackets = computed(() => {
-  const popular = racketItems.value;
+  const popular = currentRackets.value;
   popular.sort((a, b) => b.rating - a.rating);
   return popular;
 });
 
 // sorts rackets by price ascending
 const lowtoHighPriceRackets = computed(() => {
-  const lowToHigh = racketItems.value;
+  const lowToHigh = currentRackets.value;
   lowToHigh.sort((a, b) => {
     const aPrice = a.salePrice === 0 ? a.price : a.salePrice;
     const bPrice = b.salePrice === 0 ? b.price : b.salePrice;
@@ -119,7 +123,7 @@ const lowtoHighPriceRackets = computed(() => {
 
 // sorts rackets by price descending
 const highToLowPriceRackets = computed(() => {
-  const highToLow = racketItems.value;
+  const highToLow = currentRackets.value;
   highToLow.sort((a, b) => {
     const aPrice = a.salePrice === 0 ? a.price : a.salePrice;
     const bPrice = b.salePrice === 0 ? b.price : b.salePrice;
@@ -132,6 +136,7 @@ const setCurrentRackets = (current) => {
   currentRackets.value = current;
 };
 
+// handles racket sorting
 const manageSorting = (sorting) => {
   if (sorting === "Most popular") {
     setCurrentRackets(mostPopularRackets.value);
@@ -139,6 +144,90 @@ const manageSorting = (sorting) => {
     setCurrentRackets(lowtoHighPriceRackets.value);
   } else if (sorting === "Price high-to-low") {
     setCurrentRackets(highToLowPriceRackets.value);
+  }
+};
+
+// manages racket filtering by brand, price range, weight, headsize, gripsize
+const manageFiltering = (args) => {
+  //set current rackets to default before filtering
+  setCurrentRackets(racketItems.value);
+
+  // brands
+  if (
+    currentRackets.value !== undefined &&
+    Array.isArray(currentRackets.value)
+  ) {
+    args.brands.forEach((element) => {
+      if (element.value) {
+        const filtered = currentRackets.value.filter(
+          (r) => r.brand === element.name
+        );
+        setCurrentRackets(filtered);
+      }
+    });
+  }
+
+  // prices
+  if (
+    currentRackets.value !== undefined &&
+    Array.isArray(currentRackets.value)
+  ) {
+    const filtered = currentRackets.value.filter((r) => {
+      const racketPrice = r.salePrice === 0 ? r.price : r.salePrice;
+      return (
+        racketPrice >= args.prices[0].min && racketPrice <= args.prices[0].max
+      );
+    });
+    setCurrentRackets(filtered);
+  }
+
+  // weight
+  if (
+    currentRackets.value !== undefined &&
+    Array.isArray(currentRackets.value)
+  ) {
+    args.weights.forEach((element) => {
+      if (element.value) {
+        const filtered = currentRackets.value.filter(
+          (r) =>
+            Number(r.weight) >= Number(element.min) &&
+            Number(r.weight) <= Number(element.max)
+        );
+        setCurrentRackets(filtered);
+      }
+    });
+  }
+
+  // head sizes
+  if (
+    currentRackets.value !== undefined &&
+    Array.isArray(currentRackets.value)
+  ) {
+    args.headSizes.forEach((element) => {
+      if (element.value) {
+        const filtered = currentRackets.value.filter(
+          (r) =>
+            Number(r.headSize) >= Number(element.min) &&
+            Number(r.headSize) <= Number(element.max)
+        );
+        setCurrentRackets(filtered);
+      }
+    });
+  }
+
+  // grip sizes
+  if (
+    currentRackets.value !== undefined &&
+    Array.isArray(currentRackets.value)
+  ) {
+    args.gripSizes.forEach((element) => {
+      if (element.value) {
+        const filtered = currentRackets.value.filter(
+          (r) => r.gripSize === element.grip
+        );
+        setCurrentRackets(filtered);
+      }
+    });
   }
 };
 </script>
