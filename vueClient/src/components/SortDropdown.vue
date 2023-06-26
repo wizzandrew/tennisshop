@@ -26,7 +26,7 @@
 
 <script setup>
 import { ref } from "vue";
-//const props = defineProps(["handleSorting"]);
+const props = defineProps(["emitName"]);
 const mostPopular = "Most popular";
 const lowToHigh = "Price low-to-high";
 const highToLow = "Price high-to-low";

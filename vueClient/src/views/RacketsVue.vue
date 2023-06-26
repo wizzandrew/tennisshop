@@ -22,7 +22,9 @@
             </div>
             <div class="col-6 racketsSorting">
               <span><b>Sort by:</b></span>
-              <div><SortDropdown @select="manageSorting" /></div>
+              <div>
+                <SortDropdown @select="manageSorting" />
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +94,7 @@
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
 import SortDropdown from "../components/SortDropdown.vue";
-import FilterItems from "../components/FilterItems.vue";
+import FilterItems from "../components/FilterRacketItems.vue";
 import { onMounted, onUpdated, computed, ref } from "vue";
 
 const store = shopStore();
