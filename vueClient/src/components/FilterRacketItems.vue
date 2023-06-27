@@ -6,46 +6,21 @@
         <hr />
         <div class="brandFilter">
           <ul class="list-group brands-list">
-            <li class="list-group-item brands-list-item">
+            <li
+              class="list-group-item brands-list-item"
+              v-for="brand in brandState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="brandState.babolat"
-                id="babolatCheckbox"
+                v-model="brand.value"
+                v-bind:id="dynamicAttr(brand.name, 'Checkbox')"
                 @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="babolatCheckbox"
-                >{{ brands[0] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.head"
-                id="headCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="headCheckbox"
-                >{{ brands[1] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.wilson"
-                id="wilsonCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="wilsonCheckbox"
-                >{{ brands[2] }}</label
+                v-bind:for="dynamicAttr(brand.name, 'Checkbox')"
+                >{{ brand.name }}</label
               >
             </li>
           </ul>
@@ -97,46 +72,21 @@
         <hr />
         <div class="weightFilter">
           <ul class="list-group weight-list">
-            <li class="list-group-item weight-list-item">
+            <li
+              class="list-group-item weight-list-item"
+              v-for="weight in weightState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="weightState.smallWeight"
-                id="weightSmallCheckbox"
+                v-model="weight.value"
+                v-bind:id="dynamicAttr(weight.min, 'Checkbox')"
                 @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="weightSmallCheckbox"
-                >{{ weight[0] }} g - {{ weight[1] }} g</label
-              >
-            </li>
-            <li class="list-group-item weight-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="weightState.mediumWeight"
-                id="weightMediumCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="weightMediumCheckbox"
-                >{{ weight[2] }} g - {{ weight[3] }} g</label
-              >
-            </li>
-            <li class="list-group-item weight-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="weightState.largeWeight"
-                id="weightLargeCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="weightLargeCheckbox"
-                >{{ weight[4] }} g - {{ weight[5] }} g</label
+                v-bind:for="dynamicAttr(weight.min, 'Checkbox')"
+                >{{ weight.min }} g - {{ weight.max }} g</label
               >
             </li>
           </ul>
@@ -149,50 +99,21 @@
         <hr />
         <div class="headSizeFilter">
           <ul class="list-group headSize-list">
-            <li class="list-group-item headSize-list-item">
+            <li
+              class="list-group-item headSize-list-item"
+              v-for="head in headState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="headState.smallHead"
-                id="headSizeSmallCheckbox"
+                v-model="head.value"
+                v-bind:id="dynamicAttr(head.min, 'Checkbox')"
                 @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="headSizeSmallCheckbox"
-                >{{ headSize[0] }} cm<sup>2</sup> - {{ headSize[1] }} cm<sup
-                  >2</sup
-                ></label
-              >
-            </li>
-            <li class="list-group-item headSize-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="headState.mediumHead"
-                id="headSizeMediumCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="headSizeMediumCheckbox"
-                >{{ headSize[2] }} cm<sup>2</sup> - {{ headSize[3] }} cm<sup
-                  >2</sup
-                ></label
-              >
-            </li>
-            <li class="list-group-item headSize-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="headState.largeHead"
-                id="headSizeLargeCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="headSizeLargeCheckbox"
-                >{{ headSize[4] }} cm<sup>2</sup> - {{ headSize[5] }} cm<sup
+                v-bind:for="dynamicAttr(head.min, 'Checkbox')"
+                >{{ head.min }} cm<sup>2</sup> - {{ head.max }} cm<sup
                   >2</sup
                 ></label
               >
@@ -207,46 +128,21 @@
         <hr />
         <div class="gripSizeFilter">
           <ul class="list-group gripSize-list">
-            <li class="list-group-item gripSize-list-item">
+            <li
+              class="list-group-item gripSize-list-item"
+              v-for="grip in gripSizeState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="gripSizeState.grip1"
-                id="gripSizeSmallCheckbox"
+                v-model="grip.value"
+                v-bind:id="dynamicAttr(grip.grip, 'Checkbox')"
                 @change="racketsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="gripSizeSmallCheckbox"
-                >{{ gripSize[0] }}</label
-              >
-            </li>
-            <li class="list-group-item gripSize-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="gripSizeState.grip2"
-                id="gripSizeMediumCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="gripSizeMediumCheckbox"
-                >{{ gripSize[1] }}</label
-              >
-            </li>
-            <li class="list-group-item gripSize-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="gripSizeState.grip3"
-                id="gripSizeLargeCheckbox"
-                @change="racketsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="gripSizeLargeCheckbox"
-                >{{ gripSize[2] }}</label
+                v-bind:for="dynamicAttr(grip.grip, 'Checkbox')"
+                >{{ grip.grip }}</label
               >
             </li>
           </ul>
@@ -257,35 +153,31 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
-const brands = ["Babolat", "HEAD", "Wilson"];
-const weight = ["250", "275", "276", "285", "286", "295"];
-const headSize = ["600", "626", "627", "632", "633", "645"];
-const gripSize = ["1", "2", "3"];
+import { ref } from "vue";
 
-const brandState = ref({
-  babolat: false,
-  head: false,
-  wilson: false,
-});
+const brandState = ref([
+  { name: "Babolat", value: false },
+  { name: "HEAD", value: false },
+  { name: "Wilson", value: false },
+]);
 
-const weightState = ref({
-  smallWeight: false,
-  mediumWeight: false,
-  largeWeight: false,
-});
+const weightState = ref([
+  { min: "250", max: "275", value: false },
+  { min: "276", max: "285", value: false },
+  { min: "286", max: "295", value: false },
+]);
 
-const headState = ref({
-  smallHead: false,
-  mediumHead: false,
-  largeHead: false,
-});
+const headState = ref([
+  { min: "600", max: "626", value: false },
+  { min: "627", max: "632", value: false },
+  { min: "633", max: "645", value: false },
+]);
 
-const gripSizeState = ref({
-  grip1: false,
-  grip2: false,
-  grip3: false,
-});
+const gripSizeState = ref([
+  { grip: "1", value: false },
+  { grip: "2", value: false },
+  { grip: "3", value: false },
+]);
 
 const leftPriceSlider = ref(50);
 const rightPriceSlider = ref(300);
@@ -302,9 +194,9 @@ const racketsFilter = () => {
   const gripsToFilter = [];
 
   // brands
-  brandsToFilter.push({ name: brands[0], value: brandState.value.babolat });
-  brandsToFilter.push({ name: brands[1], value: brandState.value.head });
-  brandsToFilter.push({ name: brands[2], value: brandState.value.wilson });
+  brandState.value.forEach((element) => {
+    brandsToFilter.push(element);
+  });
 
   // price
   pricesToFilter.push({
@@ -313,43 +205,19 @@ const racketsFilter = () => {
   });
 
   // weights
-  weigtsToFilter.push({
-    min: weight[0],
-    max: weight[1],
-    value: weightState.value.smallWeight,
-  });
-  weigtsToFilter.push({
-    min: weight[2],
-    max: weight[3],
-    value: weightState.value.mediumWeight,
-  });
-  weigtsToFilter.push({
-    min: weight[4],
-    max: weight[5],
-    value: weightState.value.largeWeight,
+  weightState.value.forEach((element) => {
+    weigtsToFilter.push(element);
   });
 
   // head sizes
-  headsToFilter.push({
-    min: headSize[0],
-    max: headSize[1],
-    value: headState.value.smallHead,
-  });
-  headsToFilter.push({
-    min: headSize[2],
-    max: headSize[3],
-    value: headState.value.mediumHead,
-  });
-  headsToFilter.push({
-    min: headSize[4],
-    max: headSize[5],
-    value: headState.value.largeHead,
+  headState.value.forEach((element) => {
+    headsToFilter.push(element);
   });
 
   // grip sizes
-  gripsToFilter.push({ grip: gripSize[0], value: gripSizeState.value.grip1 });
-  gripsToFilter.push({ grip: gripSize[1], value: gripSizeState.value.grip2 });
-  gripsToFilter.push({ grip: gripSize[2], value: gripSizeState.value.grip3 });
+  gripSizeState.value.forEach((element) => {
+    gripsToFilter.push(element);
+  });
 
   // construct filter object
   const filterObject = {
@@ -373,6 +241,11 @@ const validateRange = () => {
 
   // call racketsFilter() to proceed to emit
   racketsFilter();
+};
+
+// gives dynamic id for <input>
+const dynamicAttr = (property, string) => {
+  return property + "rackets" + string;
 };
 </script>
 
