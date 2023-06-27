@@ -148,10 +148,12 @@ const manageFiltering = (args) => {
     currentClothings.value !== undefined &&
     Array.isArray(currentClothings.value)
   ) {
-    const filtered = currentClothings.value.filter(
-      (c) => c.type === args.type[0].name
-    );
-    setCurrentClothings(filtered);
+    if (args.type[0].name.length > 0) {
+      const filtered = currentClothings.value.filter(
+        (c) => c.type === args.type[0].name
+      );
+      setCurrentClothings(filtered);
+    }
   }
 
   // brands

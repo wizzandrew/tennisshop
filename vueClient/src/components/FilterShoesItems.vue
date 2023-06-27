@@ -263,7 +263,7 @@ const validateRange = () => {
 
 // gives dynamic id for <input>
 const dynamicAttr = (property, string) => {
-  return property + string;
+  return property + "shoes" + string;
 };
 </script>
 

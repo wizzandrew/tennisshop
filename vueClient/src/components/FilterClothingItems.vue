@@ -6,46 +6,14 @@
         <hr />
         <div class="typeFilter">
           <ul class="list-group types-list">
-            <li class="list-group-item types-list-item">
+            <li
+              class="list-group-item types-list-item"
+              v-for="_type in clothingTypes"
+            >
               <label
                 class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[0])"
-                >{{ clothingTypes[0] }}</label
-              >
-            </li>
-            <li class="list-group-item types-list-item">
-              <label
-                class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[1])"
-                >{{ clothingTypes[1] }}</label
-              >
-            </li>
-            <li class="list-group-item types-list-item">
-              <label
-                class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[2])"
-                >{{ clothingTypes[2] }}</label
-              >
-            </li>
-            <li class="list-group-item types-list-item">
-              <label
-                class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[3])"
-                >{{ clothingTypes[3] }}</label
-              >
-            </li>
-            <li class="list-group-item types-list-item">
-              <label
-                class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[4])"
-                >{{ clothingTypes[4] }}</label
-              >
-            </li>
-            <li class="list-group-item types-list-item">
-              <label
-                class="form-check-label stretched-link"
-                @click="manageClothingType(clothingTypes[5])"
-                >{{ clothingTypes[5] }}</label
+                @click="manageClothingType(_type)"
+                >{{ _type }}</label
               >
             </li>
           </ul>
@@ -58,74 +26,21 @@
         <hr />
         <div class="brandFilter">
           <ul class="list-group brands-list">
-            <li class="list-group-item brands-list-item">
+            <li
+              class="list-group-item brands-list-item"
+              v-for="brand in brandState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="brandState.adidas"
-                id="adidasCheckbox"
+                v-model="brand.value"
+                v-bind:id="dynamicAttr(brand.name, 'Checkbox')"
                 @change="clothingsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="adidasCheckbox"
-                >{{ brands[0] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.bidiBadu"
-                id="bidiBaduCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="bidiBaduCheckbox"
-                >{{ brands[1] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.head"
-                id="headCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="headCheckbox"
-                >{{ brands[2] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.nike"
-                id="nikeCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="nikeCheckbox"
-                >{{ brands[3] }}</label
-              >
-            </li>
-            <li class="list-group-item brands-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="brandState.underArmour"
-                id="underArmourCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="underArmourCheckbox"
-                >{{ brands[4] }}</label
+                v-bind:for="dynamicAttr(brand.name, 'Checkbox')"
+                >{{ brand.name }}</label
               >
             </li>
           </ul>
@@ -215,60 +130,21 @@
         <hr />
         <div class="sizeFilter">
           <ul class="list-group sizes-list">
-            <li class="list-group-item sizes-list-item">
+            <li
+              class="list-group-item sizes-list-item"
+              v-for="size in sizeState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="sizeState.small"
-                id="smallCheckbox"
+                v-model="size.value"
+                v-bind:id="dynamicAttr(size.name, 'Checkbox')"
                 @change="clothingsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="smallCheckbox"
-                >{{ sizes[0] }}</label
-              >
-            </li>
-            <li class="list-group-item sizes-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="sizeState.medium"
-                id="mediumCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="mediumCheckbox"
-                >{{ sizes[1] }}</label
-              >
-            </li>
-            <li class="list-group-item sizes-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="sizeState.large"
-                id="largeCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="largeCheckbox"
-                >{{ sizes[2] }}</label
-              >
-            </li>
-            <li class="list-group-item sizes-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="sizeState.xlarge"
-                id="xlargeCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="xlargeCheckbox"
-                >{{ sizes[3] }}</label
+                v-bind:for="dynamicAttr(size.name, 'Checkbox')"
+                >{{ size.name }}</label
               >
             </li>
           </ul>
@@ -281,102 +157,21 @@
         <hr />
         <div class="colourFilter">
           <ul class="list-group colours-list">
-            <li class="list-group-item colours-list-item">
+            <li
+              class="list-group-item colours-list-item"
+              v-for="colour in colourState"
+            >
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                v-model="colourState.black"
-                id="blackCheckbox"
+                v-model="colour.value"
+                v-bind:id="dynamicAttr(colour.name, 'Checkbox')"
                 @change="clothingsFilter"
               />
               <label
                 class="form-check-label stretched-link"
-                for="blackCheckbox"
-                >{{ colours[0] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.blue"
-                id="blueCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="blueCheckbox"
-                >{{ colours[1] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.white"
-                id="whiteCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="whiteCheckbox"
-                >{{ colours[2] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.grey"
-                id="greyCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="greyCheckbox"
-                >{{ colours[3] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.red"
-                id="redCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="redCheckbox"
-                >{{ colours[4] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.green"
-                id="greenCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="greenCheckbox"
-                >{{ colours[5] }}</label
-              >
-            </li>
-            <li class="list-group-item colours-list-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                v-model="colourState.yellow"
-                id="yellowCheckbox"
-                @change="clothingsFilter"
-              />
-              <label
-                class="form-check-label stretched-link"
-                for="yellowCheckbox"
-                >{{ colours[6] }}</label
+                v-bind:for="dynamicAttr(colour.name, 'Checkbox')"
+                >{{ colour.name }}</label
               >
             </li>
           </ul>
@@ -389,43 +184,40 @@
 <script setup>
 import { ref } from "vue";
 const clothingTypes = ["Hoodie", "Pants", "Dress", "Skirt", "Shirt", "Shorts"];
-const brands = ["Adidas", "BIDI BADU", "HEAD", "Nike", "Under Armour"];
-const sizes = ["S", "M", "L", "XL"];
-const colours = ["Black", "Blue", "White", "Grey", "Red", "Green", "Yellow"];
+const currentClothingType = ref("");
 
-const brandState = ref({
-  adidas: false,
-  bidiBadu: false,
-  head: false,
-  nike: false,
-  underArmour: false,
-});
+const brandState = ref([
+  { name: "Adidas", value: false },
+  { name: "BIDI BADU", value: false },
+  { name: "HEAD", value: false },
+  { name: "Nike", value: false },
+  { name: "Under Armour", value: false },
+]);
 
 const genderState = ref({
   male: false,
   female: false,
 });
 
-const sizeState = ref({
-  small: false,
-  medium: false,
-  large: false,
-  xlarge: false,
-});
+const sizeState = ref([
+  { name: "S", value: false },
+  { name: "M", value: false },
+  { name: "L", value: false },
+  { name: "XL", value: false },
+]);
 
-const colourState = ref({
-  black: false,
-  blue: false,
-  white: false,
-  grey: false,
-  red: false,
-  green: false,
-  yellow: false,
-});
+const colourState = ref([
+  { name: "Black", value: false },
+  { name: "Blue", value: false },
+  { name: "White", value: false },
+  { name: "Grey", value: false },
+  { name: "Red", value: false },
+  { name: "Green", value: false },
+  { name: "Yellow", value: false },
+]);
 
 const leftPriceSlider = ref(10);
 const rightPriceSlider = ref(150);
-const clothingType = ref("");
 
 const clothingsFilterEmit = defineEmits("filter-clothings");
 
@@ -441,15 +233,13 @@ const clothingsFilter = () => {
 
   // clothing type
   clothType.push({
-    name: clothingType.value,
+    name: currentClothingType.value,
   });
 
   // brands
-  brandsToFilter.push({ name: brands[0], value: brandState.value.adidas });
-  brandsToFilter.push({ name: brands[1], value: brandState.value.bidiBadu });
-  brandsToFilter.push({ name: brands[2], value: brandState.value.head });
-  brandsToFilter.push({ name: brands[3], value: brandState.value.nike });
-  brandsToFilter.push({ name: brands[4], value: brandState.value.underArmour });
+  brandState.value.forEach((element) => {
+    brandsToFilter.push(element);
+  });
 
   // price
   pricesToFilter.push({
@@ -464,19 +254,14 @@ const clothingsFilter = () => {
   });
 
   // size
-  sizesToFilter.push({ name: sizes[0], value: sizeState.value.small });
-  sizesToFilter.push({ name: sizes[1], value: sizeState.value.medium });
-  sizesToFilter.push({ name: sizes[2], value: sizeState.value.large });
-  sizesToFilter.push({ name: sizes[3], value: sizeState.value.xlarge });
+  sizeState.value.forEach((element) => {
+    sizesToFilter.push(element);
+  });
 
   // colour
-  coloursToFilter.push({ name: colours[0], value: colourState.value.black });
-  coloursToFilter.push({ name: colours[1], value: colourState.value.blue });
-  coloursToFilter.push({ name: colours[2], value: colourState.value.white });
-  coloursToFilter.push({ name: colours[3], value: colourState.value.grey });
-  coloursToFilter.push({ name: colours[4], value: colourState.value.red });
-  coloursToFilter.push({ name: colours[5], value: colourState.value.green });
-  coloursToFilter.push({ name: colours[6], value: colourState.value.yellow });
+  colourState.value.forEach((element) => {
+    coloursToFilter.push(element);
+  });
 
   // construct filter object
   const filterObject = {
@@ -493,7 +278,7 @@ const clothingsFilter = () => {
 
 // manage clothing type selection
 const manageClothingType = (type) => {
-  clothingType.value = type;
+  currentClothingType.value = type;
   clothingsFilter();
 };
 
@@ -507,6 +292,11 @@ const validateRange = () => {
 
   // call clothingsFilter() to proceed to emit
   clothingsFilter();
+};
+
+// gives dynamic id for <input>
+const dynamicAttr = (property, string) => {
+  return property + "clothing" + string;
 };
 </script>
 
