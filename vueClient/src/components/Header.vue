@@ -62,13 +62,7 @@
               <a class="nav-link" href="/shoes">Tennis shoes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bags">Tennis bags</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/balls">Tennis balls</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/strings">Tennis strings</a>
+              <a class="nav-link" href="/accessories">Tennis accessories</a>
             </li>
           </ul>
         </div>
