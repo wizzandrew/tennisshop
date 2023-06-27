@@ -388,10 +388,10 @@
 
 <script setup>
 import { ref } from "vue";
+const clothingTypes = ["Hoodie", "Pants", "Dress", "Skirt", "Shirt", "Shorts"];
 const brands = ["Adidas", "BIDI BADU", "HEAD", "Nike", "Under Armour"];
 const sizes = ["S", "M", "L", "XL"];
 const colours = ["Black", "Blue", "White", "Grey", "Red", "Green", "Yellow"];
-const clothingTypes = ["Hoodie", "Pants", "Dress", "Skirt", "Shirt", "Shorts"];
 
 const brandState = ref({
   adidas: false,
@@ -429,7 +429,7 @@ const clothingType = ref("");
 
 const clothingsFilterEmit = defineEmits("filter-clothings");
 
-// function constructs filter object and emits it to parent(RacketVue)
+// function constructs filter object and emits it to parent(ClothingVue)
 const clothingsFilter = () => {
   // arrays to hold filter state and checkbox value
   const clothType = [];
