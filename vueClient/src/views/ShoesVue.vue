@@ -33,40 +33,45 @@
           >
             <div class="row">
               <div class="col-6 col-md-3 shoes" v-for="shoes in currentShoes">
-                <div class="card">
-                  <img
-                    v-bind:src="shoes.img"
-                    class="card-img-top"
-                    alt="clothing"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">
-                      <b>{{ shoes.brand }}</b> {{ shoes.name }}
-                    </p>
-                    <div class="shoesPrice">
-                      <span v-if="shoes.salePrice === 0"
-                        ><b>€ {{ shoes.price }}</b></span
-                      >
-                      <span v-else
-                        ><del>€ {{ shoes.price }}</del> <br />
-                        <b>€ {{ shoes.salePrice }}</b></span
-                      >
-                    </div>
-                    <div class="shoesRating" v-if="shoes.rating">
-                      <div class="ratingWrapper">
-                        <span
-                          v-for="index in Math.floor(shoes.rating)"
-                          style="color: #ffed00"
-                          >★</span
+                <router-link
+                  :to="getShoesLink(shoes.id)"
+                  style="color: black; text-decoration: none"
+                >
+                  <div class="card">
+                    <img
+                      v-bind:src="shoes.img"
+                      class="card-img-top"
+                      alt="clothing"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        <b>{{ shoes.brand }}</b> {{ shoes.name }}
+                      </p>
+                      <div class="shoesPrice">
+                        <span v-if="shoes.salePrice === 0"
+                          ><b>€ {{ shoes.price }}</b></span
                         >
-                        <span v-for="index in 5 - Math.floor(shoes.rating)"
-                          >★</span
+                        <span v-else
+                          ><del>€ {{ shoes.price }}</del> <br />
+                          <b>€ {{ shoes.salePrice }}</b></span
                         >
-                        <span>{{ shoes.rating }}</span>
+                      </div>
+                      <div class="shoesRating" v-if="shoes.rating">
+                        <div class="ratingWrapper">
+                          <span
+                            v-for="index in Math.floor(shoes.rating)"
+                            style="color: #ffed00"
+                            >★</span
+                          >
+                          <span v-for="index in 5 - Math.floor(shoes.rating)"
+                            >★</span
+                          >
+                          <span>{{ shoes.rating }}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -119,6 +124,11 @@ const highToLowPriceShoes = computed(() => {
   });
   return highToLow;
 });
+
+// creates link for single shoes
+const getShoesLink = (id) => {
+  return `/shoes/${id}`;
+};
 
 const setCurrentShoes = (current) => {
   currentShoes.value = current;

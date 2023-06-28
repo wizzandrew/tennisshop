@@ -35,51 +35,56 @@
           >
             <div class="row">
               <div class="col-6 racket" v-for="racket in currentRackets">
-                <div class="col-5">
-                  <img v-bind:src="racket.img" alt="racket" />
-                </div>
-                <div class="col-7">
-                  <p>
-                    <b>{{ racket.brand }}</b> {{ racket.name }}
-                  </p>
-                  <div class="racketPrice">
-                    <span v-if="racket.salePrice === 0"
-                      ><b>€ {{ racket.price }}</b></span
-                    >
-                    <span v-else
-                      ><del>€ {{ racket.price }}</del> <br />
-                      <b>€ {{ racket.salePrice }}</b></span
-                    >
+                <router-link
+                  :to="getRacketLink(racket.id)"
+                  style="color: black; text-decoration: none"
+                >
+                  <div class="col-5">
+                    <img v-bind:src="racket.img" alt="racket" />
                   </div>
-                  <div class="racketRating" v-if="racket.popular">
-                    <div class="ratingWrapper">
-                      <span
-                        v-for="index in Math.floor(racket.rating)"
-                        style="color: #ffed00"
-                        >★</span
+                  <div class="col-7">
+                    <p>
+                      <b>{{ racket.brand }}</b> {{ racket.name }}
+                    </p>
+                    <div class="racketPrice">
+                      <span v-if="racket.salePrice === 0"
+                        ><b>€ {{ racket.price }}</b></span
                       >
-                      <span v-for="index in 5 - Math.floor(racket.rating)"
-                        >★</span
+                      <span v-else
+                        ><del>€ {{ racket.price }}</del> <br />
+                        <b>€ {{ racket.salePrice }}</b></span
                       >
                     </div>
-                    <p>Rating {{ racket.rating }}</p>
+                    <div class="racketRating" v-if="racket.popular">
+                      <div class="ratingWrapper">
+                        <span
+                          v-for="index in Math.floor(racket.rating)"
+                          style="color: #ffed00"
+                          >★</span
+                        >
+                        <span v-for="index in 5 - Math.floor(racket.rating)"
+                          >★</span
+                        >
+                      </div>
+                      <p>Rating {{ racket.rating }}</p>
+                    </div>
+                    <hr />
+                    <div class="racketFeatures">
+                      <div class="racketHead">
+                        <img src="../img/racket-icon2.png" />
+                        <span>{{ racket.headSize }}cm<sup>2</sup></span>
+                      </div>
+                      <div class="racketGrip">
+                        <img src="../img/grip-icon.png" />
+                        <span>{{ racket.gripSize }}</span>
+                      </div>
+                      <div class="racketWeight">
+                        <img src="../img/weight-icon.png" />
+                        <span>{{ racket.weight }}g</span>
+                      </div>
+                    </div>
                   </div>
-                  <hr />
-                  <div class="racketFeatures">
-                    <div class="racketHead">
-                      <img src="../img/racket-icon2.png" />
-                      <span>{{ racket.headSize }}cm<sup>2</sup></span>
-                    </div>
-                    <div class="racketGrip">
-                      <img src="../img/grip-icon.png" />
-                      <span>{{ racket.gripSize }}</span>
-                    </div>
-                    <div class="racketWeight">
-                      <img src="../img/weight-icon.png" />
-                      <span>{{ racket.weight }}g</span>
-                    </div>
-                  </div>
-                </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -133,6 +138,11 @@ const highToLowPriceRackets = computed(() => {
   });
   return highToLow;
 });
+
+// creates link for single racket
+const getRacketLink = (id) => {
+  return `/racket/${id}`;
+};
 
 const setCurrentRackets = (current) => {
   currentRackets.value = current;

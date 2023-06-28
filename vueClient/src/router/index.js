@@ -28,9 +28,19 @@ const router = createRouter({
       component: () => import('../views/RacketsVue.vue')
     },
     {
+      path: '/racket/:id',
+      name: 'racket-item',
+      component: () => import('../components/RacketItem.vue'), props: true
+    },
+    {
       path: '/clothing',
       name: 'clothing',
       component: () => import('../views/ClothingVue.vue')
+    },
+    {
+      path: '/clothing/:id',
+      name: 'clothing-item',
+      component: () => import('../components/ClothingItem.vue'), props: true
     },
     {
       path: '/shoes',
@@ -38,11 +48,25 @@ const router = createRouter({
       component: () => import('../views/ShoesVue.vue')
     },
     {
+      path: '/shoes/:id',
+      name: 'shoes-item',
+      component: () => import('../components/ShoesItem.vue'), props: true
+    },
+    {
       path: '/accessories',
       name: 'accessories',
       component: () => import('../views/AccessoriesVue.vue')
     },
-  ]
+    {
+      path: '/accessory/:id',
+      name: 'accessory-item',
+      component: () => import('../components/AccessoryItem.vue'), props: true
+    }
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  }
 })
 
 export default router

@@ -38,40 +38,46 @@
                 class="col-6 col-md-3 accessory"
                 v-for="accessory in currentAccessories"
               >
-                <div class="card">
-                  <img
-                    v-bind:src="accessory.img"
-                    class="card-img-top"
-                    alt="clothing"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">
-                      <b>{{ accessory.brand }}</b> {{ accessory.name }}
-                    </p>
-                    <div class="clothingPrice">
-                      <span v-if="accessory.salePrice === 0"
-                        ><b>€ {{ accessory.price }}</b></span
-                      >
-                      <span v-else
-                        ><del>€ {{ accessory.price }}</del> <br />
-                        <b>€ {{ accessory.salePrice }}</b></span
-                      >
-                    </div>
-                    <div class="accessoryRating" v-if="accessory.rating">
-                      <div class="ratingWrapper">
-                        <span
-                          v-for="index in Math.floor(accessory.rating)"
-                          style="color: #ffed00"
-                          >★</span
+                <router-link
+                  :to="getAccessoryLink(accessory.id)"
+                  style="color: black; text-decoration: none"
+                >
+                  <div class="card">
+                    <img
+                      v-bind:src="accessory.img"
+                      class="card-img-top"
+                      alt="clothing"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        <b>{{ accessory.brand }}</b> {{ accessory.name }}
+                      </p>
+                      <div class="clothingPrice">
+                        <span v-if="accessory.salePrice === 0"
+                          ><b>€ {{ accessory.price }}</b></span
                         >
-                        <span v-for="index in 5 - Math.floor(accessory.rating)"
-                          >★</span
+                        <span v-else
+                          ><del>€ {{ accessory.price }}</del> <br />
+                          <b>€ {{ accessory.salePrice }}</b></span
                         >
-                        <span>{{ accessory.rating }}</span>
+                      </div>
+                      <div class="accessoryRating" v-if="accessory.rating">
+                        <div class="ratingWrapper">
+                          <span
+                            v-for="index in Math.floor(accessory.rating)"
+                            style="color: #ffed00"
+                            >★</span
+                          >
+                          <span
+                            v-for="index in 5 - Math.floor(accessory.rating)"
+                            >★</span
+                          >
+                          <span>{{ accessory.rating }}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -124,6 +130,11 @@ const highToLowPriceAccessories = computed(() => {
   });
   return highToLow;
 });
+
+// creates link for single accessory
+const getAccessoryLink = (id) => {
+  return `/accessory/${id}`;
+};
 
 const setCurrentAccessories = (current) => {
   currentAccessories.value = current;

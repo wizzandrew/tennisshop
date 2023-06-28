@@ -183,7 +183,7 @@
 
 <script setup>
 import { ref } from "vue";
-const clothingTypes = ["Hoodie", "Pants", "Dress", "Skirt", "Shirt", "Shorts"];
+const clothingTypes = ["Hoody", "Pants", "Dress", "Skirt", "Shirt", "Shorts"];
 const currentClothingType = ref("");
 
 const brandState = ref([
@@ -278,7 +278,13 @@ const clothingsFilter = () => {
 
 // manage clothing type selection
 const manageClothingType = (type) => {
-  currentClothingType.value = type;
+  // patch
+  // "Hoody" in db is set to "Hoodie"
+  if (type == "Hoody") {
+    currentClothingType.value = "Hoodie";
+  } else {
+    currentClothingType.value = type;
+  }
   clothingsFilter();
 };
 
