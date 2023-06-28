@@ -692,7 +692,7 @@ public class Seed
             Gender = true,
             Color = Enums.Green,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience unbeatable comfort and style with the Under Armour Hoody. Designed for men who value both fashion and functionality, this hoody combines a sleek and modern aesthetic with the renowned performance of Under Armour. Crafted with high-quality materials, it offers a cozy and comfortable fit that's perfect for everyday wear. With its versatile design and attention to detail, this Under Armour hoody is a timeless addition to your wardrobe, providing a reliable and stylish option for any occasion. Whether you're heading to the gym, running errands, or simply relaxing, this hoody has got you covered with its combination of comfort, durability, and athletic appeal.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw24fafe6a/images/022/460/08180000_000.jpg?q=80&sw=640"
             },
 
@@ -708,56 +708,8 @@ public class Seed
             Type = Enums.Hoodie,
             Gender = true,
             Color = Enums.Grey,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw069064e2/images/022/462/09606000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essential Hoody Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Grey,
             Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw069064e2/images/022/462/09606000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essential Hoody Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Grey,
-            Size = Enums.Large,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw069064e2/images/022/462/09606000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essential Hoody Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Grey,
-            Size = Enums.ExtraLarge,
-            Description = "",
+            Description = "Experience unbeatable comfort and style with the Under Armour Hoody. Designed for men who value both fashion and functionality, this hoody combines a sleek and modern aesthetic with the renowned performance of Under Armour. Crafted with high-quality materials, it offers a cozy and comfortable fit that's perfect for everyday wear. With its versatile design and attention to detail, this Under Armour hoody is a timeless addition to your wardrobe, providing a reliable and stylish option for any occasion. Whether you're heading to the gym, running errands, or simply relaxing, this hoody has got you covered with its combination of comfort, durability, and athletic appeal.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw069064e2/images/022/462/09606000_000.jpg?q=80&sw=640"
             },
 
@@ -774,39 +726,7 @@ public class Seed
             Gender = true,
             Color = Enums.Yellow,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbb90440/images/022/460/08183000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Rival Fleece Big Logo Hoody Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 50,
-            Quantity = 10,
-            Rating = 5.0,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Yellow,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbb90440/images/022/460/08183000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Rival Fleece Big Logo Hoody Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 50,
-            Quantity = 10,
-            Rating = 5.0,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Yellow,
-            Size = Enums.Large,
-            Description = "",
+            Description = "Experience unbeatable comfort and style with the Under Armour Hoody. Designed for men who value both fashion and functionality, this hoody combines a sleek and modern aesthetic with the renowned performance of Under Armour. Crafted with high-quality materials, it offers a cozy and comfortable fit that's perfect for everyday wear. With its versatile design and attention to detail, this Under Armour hoody is a timeless addition to your wardrobe, providing a reliable and stylish option for any occasion. Whether you're heading to the gym, running errands, or simply relaxing, this hoody has got you covered with its combination of comfort, durability, and athletic appeal.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbb90440/images/022/460/08183000_000.jpg?q=80&sw=640"
             },
 
@@ -824,39 +744,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw60d2bf5b/images/022/462/09605000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Rival Terry Hoody Women",
-            Brand = Enums.UnderArmour,
-            Price = 50,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Red,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw60d2bf5b/images/022/462/09605000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Rival Terry Hoody Women",
-            Brand = Enums.UnderArmour,
-            Price = 50,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Red,
-            Size = Enums.Large,
-            Description = "",
+            Description = "Experience unbeatable comfort and style with the Under Armour Hoody. Designed for women who value both fashion and functionality, this hoody combines a sleek and modern aesthetic with the renowned performance of Under Armour. Crafted with high-quality materials, it offers a cozy and comfortable fit that's perfect for everyday wear. With its versatile design and attention to detail, this Under Armour hoody is a timeless addition to your wardrobe, providing a reliable and stylish option for any occasion. Whether you're heading to the gym, running errands, or simply relaxing, this hoody has got you covered with its combination of comfort, durability, and athletic appeal.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw60d2bf5b/images/022/462/09605000_000.jpg?q=80&sw=640"
             },
 
@@ -874,26 +762,9 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience unbeatable comfort and style with the Under Armour Hoody. Designed for men who value both fashion and functionality, this hoody combines a sleek and modern aesthetic with the renowned performance of Under Armour. Crafted with high-quality materials, it offers a cozy and comfortable fit that's perfect for everyday wear. With its versatile design and attention to detail, this Under Armour hoody is a timeless addition to your wardrobe, providing a reliable and stylish option for any occasion. Whether you're heading to the gym, running errands, or simply relaxing, this hoody has got you covered with its combination of comfort, durability, and athletic appeal.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw23ac9403/images/022/462/08495000_000.jpg?q=80&sw=640"
             },
-            new Clothing()
-            {
-            Name = "Rival Logo Hoody Women",
-            Brand = Enums.UnderArmour,
-            Price = 55,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 4.7,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Blue,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw23ac9403/images/022/462/08495000_000.jpg?q=80&sw=640"
-            },
-
 
             // nike hoodies
             new Clothing()
@@ -908,43 +779,10 @@ public class Seed
             Type = Enums.Hoodie,
             Gender = true,
             Color = Enums.Black,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw265ef1dd/images/004/457/54778000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Dri-Fit Heritage Slim Hoody Men",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 60,
-            Quantity = 10,
-            Rating = 4.6,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience the epitome of sporty style and unbeatable comfort with the Nike Hoody. Designed to elevate your casual wardrobe, this iconic hoody combines the classic Nike aesthetic with superior craftsmanship. Crafted with premium materials, it offers a soft and cozy feel, ensuring all-day comfort. The signature Nike logo adds a touch of authenticity, while the adjustable hood and kangaroo pocket provide both functionality and style. Whether you're hitting the gym, going for a run, or simply lounging around, this Nike hoody is the perfect choice for those who seek a perfect blend of fashion and performance. Embrace the legacy of Nike and make a statement with this must-have hoody.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw265ef1dd/images/004/457/54778000_000.jpg?q=80&sw=640"
             },
-            new Clothing()
-            {
-            Name = "Dri-Fit Heritage Slim Hoody Men",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 60,
-            Quantity = 10,
-            Rating = 4.6,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Black,
-            Size = Enums.Large,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw265ef1dd/images/004/457/54778000_000.jpg?q=80&sw=640"
-            },
-
 
             new Clothing()
             {
@@ -958,24 +796,8 @@ public class Seed
             Type = Enums.Hoodie,
             Gender = true,
             Color = Enums.Yellow,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc0fd6391/images/004/462/56753000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Dri-Fit Court Heritage Hoody Men",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 65,
-            Quantity = 10,
-            Rating = 4.7,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Yellow,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience the epitome of sporty style and unbeatable comfort with the Nike Hoody. Designed to elevate your casual wardrobe, this iconic hoody combines the classic Nike aesthetic with superior craftsmanship. Crafted with premium materials, it offers a soft and cozy feel, ensuring all-day comfort. The signature Nike logo adds a touch of authenticity, while the adjustable hood and kangaroo pocket provide both functionality and style. Whether you're hitting the gym, going for a run, or simply lounging around, this Nike hoody is the perfect choice for those who seek a perfect blend of fashion and performance. Embrace the legacy of Nike and make a statement with this must-have hoody.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc0fd6391/images/004/462/56753000_000.jpg?q=80&sw=640"
             },
 
@@ -993,26 +815,9 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience the epitome of sporty style and unbeatable comfort with the Nike Hoody. Designed to elevate your casual wardrobe, this iconic hoody combines the classic Nike aesthetic with superior craftsmanship. Crafted with premium materials, it offers a soft and cozy feel, ensuring all-day comfort. The signature Nike logo adds a touch of authenticity, while the adjustable hood and kangaroo pocket provide both functionality and style. Whether you're hitting the gym, going for a run, or simply lounging around, this Nike hoody is the perfect choice for those who seek a perfect blend of fashion and performance. Embrace the legacy of Nike and make a statement with this must-have hoody.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw80550083/images/004/457/54605000_000.jpg?q=80&sw=640"
             },
-            new Clothing()
-            {
-            Name = "Dri-Fit Heritage Fleece Hoody Women",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 65,
-            Quantity = 10,
-            Rating = 4.7,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.White,
-            Size = Enums.Large,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw80550083/images/004/457/54605000_000.jpg?q=80&sw=640"
-            },
-
 
             new Clothing()
             {
@@ -1027,23 +832,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw23e9e642/images/004/462/56608000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Dri-Fit Heritage Fleece Hoody Women",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 65,
-            Quantity = 10,
-            Rating = 4.7,
-            Popular = true,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Blue,
-            Size = Enums.Medium,
-            Description = "",
+            Description = "Experience the epitome of sporty style and unbeatable comfort with the Nike Hoody. Designed to elevate your casual wardrobe, this iconic hoody combines the classic Nike aesthetic with superior craftsmanship. Crafted with premium materials, it offers a soft and cozy feel, ensuring all-day comfort. The signature Nike logo adds a touch of authenticity, while the adjustable hood and kangaroo pocket provide both functionality and style. Whether you're hitting the gym, going for a run, or simply lounging around, this Nike hoody is the perfect choice for those who seek a perfect blend of fashion and performance. Embrace the legacy of Nike and make a statement with this must-have hoody.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw23e9e642/images/004/462/56608000_000.jpg?q=80&sw=640"
             },
 
@@ -1061,7 +850,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience the epitome of sporty style and unbeatable comfort with the Nike Hoody. Designed to elevate your casual wardrobe, this iconic hoody combines the classic Nike aesthetic with superior craftsmanship. Crafted with premium materials, it offers a soft and cozy feel, ensuring all-day comfort. The signature Nike logo adds a touch of authenticity, while the adjustable hood and kangaroo pocket provide both functionality and style. Whether you're hitting the gym, going for a run, or simply lounging around, this Nike hoody is the perfect choice for those who seek a perfect blend of fashion and performance. Embrace the legacy of Nike and make a statement with this must-have hoody.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw2d25c9ef/images/004/463/57032000_000.jpg?q=80&sw=2000"
             },
 
@@ -1078,40 +867,8 @@ public class Seed
             Type = Enums.Hoodie,
             Gender = true,
             Color = Enums.Black,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdc57927c/images/005/456/15724000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "3-Stripes French Terry Hoody Men",
-            Brand = Enums.Adidas,
-            Price = 50,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 4.0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Black,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdc57927c/images/005/456/15724000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "3-Stripes French Terry Hoody Men",
-            Brand = Enums.Adidas,
-            Price = 50,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 4.0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.Black,
             Size = Enums.Large,
-            Description = "",
+            Description = "Step up your streetwear game with the Adidas Hoody. A perfect blend of style and functionality, this iconic hoody showcases the timeless Adidas design and superior craftsmanship. Crafted with premium materials, it offers a comfortable and cozy fit, making it ideal for everyday wear. The Adidas logo adds a touch of authenticity and street cred, while the adjustable hood and kangaroo pocket provide practicality and convenience. Whether you're hitting the gym, running errands, or hanging out with friends, this Adidas hoody is a versatile choice that effortlessly combines fashion and performance. Embrace the sporty-chic vibe and make a bold statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdc57927c/images/005/456/15724000_000.jpg?q=80&sw=640"
             },
 
@@ -1129,39 +886,7 @@ public class Seed
             Gender = true,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwadb23460/images/005/464/18346000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Future Icon Badge Of Sport Hoody Men",
-            Brand = Enums.Adidas,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.White,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwadb23460/images/005/464/18346000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Future Icon Badge Of Sport Hoody Men",
-            Brand = Enums.Adidas,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = true,
-            Color = Enums.White,
-            Size = Enums.Large,
-            Description = "",
+            Description = "Step up your streetwear game with the Adidas Hoody. A perfect blend of style and functionality, this iconic hoody showcases the timeless Adidas design and superior craftsmanship. Crafted with premium materials, it offers a comfortable and cozy fit, making it ideal for everyday wear. The Adidas logo adds a touch of authenticity and street cred, while the adjustable hood and kangaroo pocket provide practicality and convenience. Whether you're hitting the gym, running errands, or hanging out with friends, this Adidas hoody is a versatile choice that effortlessly combines fashion and performance. Embrace the sporty-chic vibe and make a bold statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwadb23460/images/005/464/18346000_000.jpg?q=80&sw=640"
             },
 
@@ -1178,24 +903,8 @@ public class Seed
             Type = Enums.Hoodie,
             Gender = false,
             Color = Enums.Black,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw50515dc3/images/005/462/17759000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essentials Linear Hoody Women",
-            Brand = Enums.Adidas,
-            Price = 55,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your streetwear game with the Adidas Hoody. A perfect blend of style and functionality, this iconic hoody showcases the timeless Adidas design and superior craftsmanship. Crafted with premium materials, it offers a comfortable and cozy fit, making it ideal for everyday wear. The Adidas logo adds a touch of authenticity and street cred, while the adjustable hood and kangaroo pocket provide practicality and convenience. Whether you're hitting the gym, running errands, or hanging out with friends, this Adidas hoody is a versatile choice that effortlessly combines fashion and performance. Embrace the sporty-chic vibe and make a bold statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw50515dc3/images/005/462/17759000_000.jpg?q=80&sw=640"
             },
 
@@ -1213,7 +922,7 @@ public class Seed
             Gender = false,
             Color = Enums.Grey,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your streetwear game with the Adidas Hoody. A perfect blend of style and functionality, this iconic hoody showcases the timeless Adidas design and superior craftsmanship. Crafted with premium materials, it offers a comfortable and cozy fit, making it ideal for everyday wear. The Adidas logo adds a touch of authenticity and street cred, while the adjustable hood and kangaroo pocket provide practicality and convenience. Whether you're hitting the gym, running errands, or hanging out with friends, this Adidas hoody is a versatile choice that effortlessly combines fashion and performance. Embrace the sporty-chic vibe and make a bold statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw5f631074/images/005/462/17765000_000.jpg?q=80&sw=640"
             },
 
@@ -1231,39 +940,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7777e68d/images/005/462/17767000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essentials Linear Hoody Women",
-            Brand = Enums.Adidas,
-            Price = 55,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Blue,
-            Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7777e68d/images/005/462/17767000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Essentials Linear Hoody Women",
-            Brand = Enums.Adidas,
-            Price = 55,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Hoodie,
-            Gender = false,
-            Color = Enums.Blue,
-            Size = Enums.Large,
-            Description = "",
+            Description = "Step up your streetwear game with the Adidas Hoody. A perfect blend of style and functionality, this iconic hoody showcases the timeless Adidas design and superior craftsmanship. Crafted with premium materials, it offers a comfortable and cozy fit, making it ideal for everyday wear. The Adidas logo adds a touch of authenticity and street cred, while the adjustable hood and kangaroo pocket provide practicality and convenience. Whether you're hitting the gym, running errands, or hanging out with friends, this Adidas hoody is a versatile choice that effortlessly combines fashion and performance. Embrace the sporty-chic vibe and make a bold statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7777e68d/images/005/462/17767000_000.jpg?q=80&sw=640"
             },
 
@@ -1280,24 +957,8 @@ public class Seed
             Type = Enums.Pants,
             Gender = true,
             Color = Enums.Black,
-            Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw1fb70d65/images/022/452/07047000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Rival Training Pants Men",
-            Brand = Enums.UnderArmour,
-            Price = 60,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 4.4,
-            Popular = false,
-            Type = Enums.Pants,
-            Gender = true,
-            Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw1fb70d65/images/022/452/07047000_000.jpg?q=80&sw=640"
             },
 
@@ -1315,7 +976,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Large,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4003dcc8/images/022/462/08527000_000.jpg?q=80&sw=640"
             },
 
@@ -1333,26 +994,9 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd8007843/images/022/462/08560000_000.jpg?q=80&sw=640"
             },
-            new Clothing()
-            {
-            Name = "Sportstyle Tricot Training Pants Men",
-            Brand = Enums.UnderArmour,
-            Price = 70,
-            SalePrice = 55,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Pants,
-            Gender = true,
-            Color = Enums.Black,
-            Size = Enums.Large,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd8007843/images/022/462/08560000_000.jpg?q=80&sw=640"
-            },
-
 
             new Clothing()
             {
@@ -1367,7 +1011,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw12ad82c8/images/022/462/08497000_000.jpg?q=80&sw=640"
             },
 
@@ -1385,23 +1029,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Medium,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw81d18243/images/022/460/08629000_000.jpg?q=80&sw=2000"
-            },
-            new Clothing()
-            {
-            Name = "Rival Training Pants Women",
-            Brand = Enums.UnderArmour,
-            Price = 50,
-            SalePrice = 30,
-            Quantity = 10,
-            Rating = 4.6,
-            Popular = true,
-            Type = Enums.Pants,
-            Gender = false,
-            Color = Enums.Red,
-            Size = Enums.Large,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw81d18243/images/022/460/08629000_000.jpg?q=80&sw=2000"
             },
 
@@ -1419,7 +1047,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic wardrobe with Under Armour Pants, a perfect fusion of style and performance. Designed with the modern athlete in mind, these pants offer exceptional comfort and functionality. Crafted with high-quality materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The signature Under Armour logo adds a touch of authenticity, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your training sessions. Whether you're hitting the gym, going for a jog, or simply running errands, Under Armour Pants deliver the perfect combination of style and practicality, making them a must-have addition to your activewear collection. Stay motivated, stay comfortable, and stay ahead of the game with Under Armour Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe8b8f42d/images/022/458/07889000_000.jpg?q=80&sw=640"
             },
 
@@ -1437,7 +1065,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc0f5a348/images/004/460/55549000_000.jpg?q=80&sw=640"
             },
 
@@ -1454,7 +1082,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Large,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcb00b19a/images/004/462/56748000_000.jpg?q=80&sw=640"
             },
 
@@ -1472,7 +1100,7 @@ public class Seed
             Gender = true,
             Color = Enums.White,
             Size = Enums.Large,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw8964e19d/images/004/460/55550000_000.jpg?q=80&sw=640"
             },
 
@@ -1490,7 +1118,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdd0a7654/images/004/462/56675000_000.jpg?q=80&sw=640"
             },
 
@@ -1508,7 +1136,7 @@ public class Seed
             Gender = false,
             Color = Enums.Grey,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw1850eceb/images/004/459/55863000_000.jpg?q=80&sw=2000"
             },
 
@@ -1526,7 +1154,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Elevate your sporty style and performance with Nike Pants, the perfect choice for athletes and casual enthusiasts alike. These iconic pants combine comfort, versatility, and sleek design to take your athletic wardrobe to the next level. Crafted with premium materials, they offer a soft and lightweight feel, allowing for unrestricted movement during workouts or everyday activities. The classic Nike logo adds a touch of authenticity and style, while the innovative moisture-wicking technology keeps you dry and comfortable throughout your active pursuits. With their modern fit and functional details, Nike Pants are the go-to option for those seeking a perfect blend of fashion and performance. Whether you're hitting the gym, running errands, or simply lounging around, embrace the sporty-chic vibe and make a bold statement with Nike Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw42f273d2/images/004/454/51951000_000.jpg?q=80&sw=2000"
             },
 
@@ -1544,7 +1172,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Large,
-            Description = "",
+            Description = "Step up your sporty style with Adidas Pants, the ultimate combination of comfort and athletic appeal. These iconic pants feature the timeless Adidas design and superior craftsmanship, making them a must-have addition to your activewear collection. Crafted with premium materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and street cred, while the innovative moisture-wicking technology keeps you cool and dry, even during intense training sessions. Whether you're hitting the gym, practicing your favorite sport, or simply running errands, Adidas Pants offer the perfect blend of style and functionality. Embrace the sporty-chic vibe and make a statement with these essential Adidas Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw14f16ba7/images/005/464/18529000_000.jpg?q=80&sw=640"
             },
 
@@ -1562,7 +1190,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your sporty style with Adidas Pants, the ultimate combination of comfort and athletic appeal. These iconic pants feature the timeless Adidas design and superior craftsmanship, making them a must-have addition to your activewear collection. Crafted with premium materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and street cred, while the innovative moisture-wicking technology keeps you cool and dry, even during intense training sessions. Whether you're hitting the gym, practicing your favorite sport, or simply running errands, Adidas Pants offer the perfect blend of style and functionality. Embrace the sporty-chic vibe and make a statement with these essential Adidas Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb312e487/images/005/464/18528000_000.jpg?q=80&sw=2000"
             },
 
@@ -1580,7 +1208,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your sporty style with Adidas Pants, the ultimate combination of comfort and athletic appeal. These iconic pants feature the timeless Adidas design and superior craftsmanship, making them a must-have addition to your activewear collection. Crafted with premium materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and street cred, while the innovative moisture-wicking technology keeps you cool and dry, even during intense training sessions. Whether you're hitting the gym, practicing your favorite sport, or simply running errands, Adidas Pants offer the perfect blend of style and functionality. Embrace the sporty-chic vibe and make a statement with these essential Adidas Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6d2daa25/images/005/464/18373000_000.jpg?q=80&sw=640"
             },
 
@@ -1598,7 +1226,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your sporty style with Adidas Pants, the ultimate combination of comfort and athletic appeal. These iconic pants feature the timeless Adidas design and superior craftsmanship, making them a must-have addition to your activewear collection. Crafted with premium materials, they provide a soft and flexible fit that allows for unrestricted movement during workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and street cred, while the innovative moisture-wicking technology keeps you cool and dry, even during intense training sessions. Whether you're hitting the gym, practicing your favorite sport, or simply running errands, Adidas Pants offer the perfect blend of style and functionality. Embrace the sporty-chic vibe and make a statement with these essential Adidas Pants.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw877838a9/images/005/464/18390000_000.jpg?q=80&sw=2000"
             },
 
@@ -1617,7 +1245,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience the perfect fusion of style and performance with the BIDI BADU Dress. Designed for the confident and fashion-forward athlete, this dress showcases a unique blend of elegance and athleticism. Crafted with premium materials, it offers a comfortable and flattering fit that accentuates your silhouette while allowing for unrestricted movement on the court. The eye-catching design and vibrant colors of the BIDI BADU Dress ensure you stand out from the crowd, making a bold statement both on and off the tennis court. With its superior craftsmanship and attention to detail, this dress combines fashion-forward aesthetics with high-performance functionality. Whether you're competing in a tournament or hitting the practice courts, the BIDI BADU Dress is the perfect choice to showcase your style and enhance your performance.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwefdca5a0/images/162/462/01954000_000.jpg?q=80&sw=640"
             },
 
@@ -1635,7 +1263,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience the perfect fusion of style and performance with the BIDI BADU Dress. Designed for the confident and fashion-forward athlete, this dress showcases a unique blend of elegance and athleticism. Crafted with premium materials, it offers a comfortable and flattering fit that accentuates your silhouette while allowing for unrestricted movement on the court. The eye-catching design and vibrant colors of the BIDI BADU Dress ensure you stand out from the crowd, making a bold statement both on and off the tennis court. With its superior craftsmanship and attention to detail, this dress combines fashion-forward aesthetics with high-performance functionality. Whether you're competing in a tournament or hitting the practice courts, the BIDI BADU Dress is the perfect choice to showcase your style and enhance your performance.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw415b5e72/images/162/462/01957000_000.jpg?q=80&sw=2000"
             },
 
@@ -1653,7 +1281,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience the perfect fusion of style and performance with the BIDI BADU Dress. Designed for the confident and fashion-forward athlete, this dress showcases a unique blend of elegance and athleticism. Crafted with premium materials, it offers a comfortable and flattering fit that accentuates your silhouette while allowing for unrestricted movement on the court. The eye-catching design and vibrant colors of the BIDI BADU Dress ensure you stand out from the crowd, making a bold statement both on and off the tennis court. With its superior craftsmanship and attention to detail, this dress combines fashion-forward aesthetics with high-performance functionality. Whether you're competing in a tournament or hitting the practice courts, the BIDI BADU Dress is the perfect choice to showcase your style and enhance your performance.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdc5cb326/images/162/462/01956000_000.jpg?q=80&sw=2000"
             },
 
@@ -1672,7 +1300,7 @@ public class Seed
             Gender = false,
             Color = Enums.Yellow,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your style game with the Adidas Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic Adidas aesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The Adidas logo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the Adidas Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa5deac80/images/005/460/17341000_000.jpg?q=80&sw=640"
             },
 
@@ -1690,7 +1318,7 @@ public class Seed
             Gender = false,
             Color = Enums.Grey,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your style game with the Adidas Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic Adidas aesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The Adidas logo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the Adidas Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb28f3abc/images/005/460/17342000_000.jpg?q=80&sw=2000"
             },
 
@@ -1708,7 +1336,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your style game with the Adidas Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic Adidas aesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The Adidas logo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the Adidas Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw31516f37/images/005/458/16604000_000.jpg?q=80&sw=2000"
             },
 
@@ -1726,7 +1354,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your style game with the HEAD Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic HEADaesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The HEADlogo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the HEAD Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of HEADapparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb3196475/images/006/462/08038000_000.jpg?q=80&sw=640"
             },
 
@@ -1743,7 +1371,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your style game with the HEAD Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic HEADaesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The HEADlogo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the HEAD Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of HEADapparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw83edd937/images/006/462/08037000_000.jpg?q=80&sw=2000"
             },
 
@@ -1760,7 +1388,7 @@ public class Seed
             Gender = false,
             Color = Enums.Green,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your style game with the HEAD Dress, a perfect blend of sporty elegance and fashion-forward design. This iconic dress combines the classic HEADaesthetic with superior craftsmanship, making it a versatile choice for any occasion. Crafted with high-quality materials, it offers a comfortable and flattering fit that accentuates your figure. The HEADlogo adds a touch of authenticity and street cred, while the sleek design and attention to detail elevate your overall look. Whether you're heading to the gym, attending a casual outing, or simply running errands, the HEAD Dress effortlessly combines style and functionality. Embrace the sporty-chic vibe and make a bold fashion statement with this essential piece of HEADapparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw874ac278/images/006/462/08039000_000.jpg?q=80&sw=2000"
             },
 
@@ -1779,7 +1407,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic style with the Nike Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Nike logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Nike Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Nike apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4674adb2/images/004/462/56618000_000.jpg?q=80&sw=640"
             },
 
@@ -1797,7 +1425,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic style with the Nike Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Nike logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Nike Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Nike apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcc186718/images/004/461/56200000_000.jpg?q=80&sw=2000"
             },
 
@@ -1815,7 +1443,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Elevate your athletic style with the Nike Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Nike logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Nike Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Nike apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwca8133e8/images/004/461/56199000_000.jpg?q=80&sw=2000"
             },
 
@@ -1834,7 +1462,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic style with the Adidas Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Adidas logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Adidas Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdb42fd99/images/005/464/18430000_000.jpg?q=80&sw=2000"
             },
 
@@ -1852,7 +1480,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic style with the Adidas Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Adidas logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Adidas Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc7cea945/images/005/462/17781000_000.jpg?q=80&sw=2000"
             },
 
@@ -1870,7 +1498,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Elevate your athletic style with the Adidas Skirt, a perfect combination of sporty flair and feminine elegance. Designed with the modern athlete in mind, this skirt offers both comfort and performance. Crafted with premium materials, it provides a lightweight and breathable feel, allowing for unrestricted movement on and off the court. The sleek design and flattering fit add a touch of sophistication, while the iconic Adidas logo showcases your sporty spirit. Whether you're playing tennis, hitting the track, or simply going for a casual outing, the Adidas Skirt effortlessly blends fashion and functionality. Embrace the sporty-chic vibe and make a statement with this essential piece of Adidas apparel.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb3cdb963/images/005/462/17780000_000.jpg?q=80&sw=2000"
             },
 
@@ -1889,23 +1517,7 @@ public class Seed
             Gender = true,
             Color = Enums.Green,
             Size = Enums.Small,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw67553fd0/images/004/463/57143000_000.jpg?q=80&sw=640"
-            },
-            new Clothing()
-            {
-            Name = "Dri-Fit Court Slam RG T-Shirt Men",
-            Brand = Enums.Nike,
-            Price = 75,
-            SalePrice = 0,
-            Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Type = Enums.Shirt,
-            Gender = true,
-            Color = Enums.Green,
-            Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw67553fd0/images/004/463/57143000_000.jpg?q=80&sw=640"
             },
 
@@ -1922,7 +1534,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw96b300eb/images/004/463/57144000_000.jpg?q=80&sw=2000"
             },
 
@@ -1939,7 +1551,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw73b69198/images/004/463/57145000_000.jpg?q=80&sw=640"
             },
 
@@ -1957,7 +1569,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwebb55e90/images/004/463/57067000_000.jpg?q=80&sw=640"
             },
 
@@ -1974,7 +1586,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa7f63a51/images/004/462/56680000_000.jpg?q=80&sw=2000"
             },
 
@@ -1991,7 +1603,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw170c93f0/images/004/458/56124000_000.jpg?q=80&sw=2000"
             },
 
@@ -2009,7 +1621,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Nike Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Nike. Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Nike logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Nike Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Nike Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw5f84d4b5/images/004/463/57070000_000.jpg?q=80&sw=640"
             },
 
@@ -2028,7 +1640,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa08f4c18/images/005/462/17960000_000.jpg?q=80&sw=640"
             },
 
@@ -2045,7 +1657,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Large,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw11e22faf/images/005/462/17958000_000.jpg?q=80&sw=640"
             },
 
@@ -2062,7 +1674,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw976054e7/images/005/462/17959000_000.png?q=80&sw=2000"
             },
 
@@ -2080,7 +1692,7 @@ public class Seed
             Gender = true,
             Color = Enums.Grey,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw914c7424/images/005/462/17971000_000.jpg?q=80&sw=640"
             },
 
@@ -2098,7 +1710,7 @@ public class Seed
             Gender = false,
             Color = Enums.Grey,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw3053c7ce/images/005/462/17798000_000.jpg?q=80&sw=640"
             },
 
@@ -2115,7 +1727,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw14bdccf4/images/005/462/17775000_000.jpg?q=80&sw=640"
             },
 
@@ -2132,7 +1744,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Experience ultimate comfort and iconic style with the Adidas Shirt. Designed for athletes and sporty enthusiasts, this shirt combines a sleek and modern aesthetic with the renowned performance of Adidas . Crafted with high-quality materials, it offers a soft and breathable feel, ensuring maximum comfort during your workouts or everyday activities. The classic Adidas logo adds a touch of authenticity and sporty appeal, while the versatile design makes it suitable for both training sessions and casual wear. Whether you're hitting the gym, going for a run, or simply lounging around, the Adidas Shirt delivers the perfect balance of style and functionality. Stay motivated, stay comfortable, and stay ahead of the game with the Adidas Shirt.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbe222ca5/images/005/462/17776000_000.jpg?q=80&sw=2000"
             },
 
@@ -2151,7 +1763,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw33aba5fb/images/004/463/57037000_000.jpg?q=80&sw=640"
             },
 
@@ -2168,7 +1780,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwf3a296d4/images/004/462/56616000_000.jpg?q=80&sw=640"
             },
 
@@ -2185,7 +1797,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw87895b32/images/004/462/56615000_000.jpg?q=80&sw=2000"
             },
 
@@ -2203,7 +1815,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdb78c910/images/004/458/55298000_000.jpg?q=80&sw=640"
             },
 
@@ -2220,7 +1832,7 @@ public class Seed
             Gender = true,
             Color = Enums.White,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0d4cc731/images/004/458/55299000_000.jpg?q=80&sw=2000"
             },
 
@@ -2237,7 +1849,7 @@ public class Seed
             Gender = true,
             Color = Enums.Green,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdcca517f/images/004/463/57130000_000.jpg?q=80&sw=640"
             },
 
@@ -2255,7 +1867,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Nike Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Nike logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Nike Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Nike Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4b062941/images/004/460/55584000_000.jpg?q=80&sw=640"
             },
 
@@ -2274,7 +1886,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7cae5a84/images/005/462/17962000_000.jpg?q=80&sw=640"
             },
 
@@ -2292,7 +1904,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc09c5192/images/005/462/17997000_000.jpg?q=80&sw=640"
             },
 
@@ -2309,7 +1921,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe058823a/images/005/462/18000000_000.jpg?q=80&sw=640"
             },
 
@@ -2326,7 +1938,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7ca32cbc/images/005/464/18533000_000.jpg?q=80&sw=2000"
             },
 
@@ -2344,7 +1956,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc2337c18/images/005/462/17778000_000.jpg?q=80&sw=640"
             },
 
@@ -2361,7 +1973,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Medium,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd88b1839/images/005/462/17799000_000.jpg?q=80&sw=640"
             },
 
@@ -2378,7 +1990,7 @@ public class Seed
             Gender = false,
             Color = Enums.White,
             Size = Enums.Small,
-            Description = "",
+            Description = "Step up your athletic game with Adidas Shorts, the perfect blend of style and performance. Designed for the modern athlete, these shorts offer unbeatable comfort and functionality. Crafted with high-quality materials, they provide a lightweight and breathable feel, keeping you cool and dry during intense workouts or everyday activities. The iconic Adidas logo adds a touch of authenticity and sporty flair, while the versatile design allows for unrestricted movement. Whether you're hitting the basketball court, going for a jog, or simply lounging around, Adidas Shorts are a go-to choice for both sporty and casual occasions. Embrace the athletic spirit and make a statement with these essential Adidas Shorts.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcd667d26/images/005/462/17815000_000.jpg?q=80&sw=640"
             }
         };
@@ -2398,42 +2010,12 @@ public class Seed
             Price = 140,
             SalePrice = 90,
             Quantity = 10,
-            Rating = 0,
-            Popular = false,
-            Gender = true,
-            Color = Enums.Grey,
-            Size = Enums.Shoes39,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0112000d/images/007/158/02586000_0_1.jpg?q=80&sw=640"
-            },
-            new Shoes()
-            {
-            Name = "Rush 4.0 Clay Court Shoe Men",
-            Brand = Enums.Wilson,
-            Price = 140,
-            SalePrice = 90,
-            Quantity = 10,
-            Rating = 4.6,
-            Popular = true,
-            Gender = true,
-            Color = Enums.Grey,
-            Size = Enums.Shoes40,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0112000d/images/007/158/02586000_0_1.jpg?q=80&sw=640"
-            },
-            new Shoes()
-            {
-            Name = "Rush 4.0 Clay Court Shoe Men",
-            Brand = Enums.Wilson,
-            Price = 140,
-            SalePrice = 90,
-            Quantity = 10,
             Rating = 4.6,
             Popular = true,
             Gender = true,
             Color = Enums.Grey,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0112000d/images/007/158/02586000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2449,22 +2031,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Shoes41,
-            Description = "",
-            Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7d998073/images/007/158/02584000_0_1.jpg?q=80&sw=640"
-            },
-            new Shoes()
-            {
-            Name = "Rush 4.0 Clay Court Shoe Men",
-            Brand = Enums.Wilson,
-            Price = 140,
-            SalePrice = 90,
-            Quantity = 10,
-            Rating = 4.6,
-            Popular = true,
-            Gender = true,
-            Color = Enums.Blue,
-            Size = Enums.Shoes42,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7d998073/images/007/158/02584000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2480,7 +2047,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw59422e4a/images/007/158/02585000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2497,7 +2064,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Shoes39,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc8ba2758/images/007/162/02608000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2513,7 +2080,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Shoes395,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc8ba2758/images/007/162/02608000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2530,7 +2097,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc98b6e40/images/007/158/02589000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2546,7 +2113,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Wilson Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Wilson Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Wilson Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Wilson Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwac367ee9/images/007/158/02546000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2564,7 +2131,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw353e9912/images/004/163/17342000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2581,7 +2148,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw43c0e99d/images/004/162/17222000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2597,7 +2164,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw43c0e99d/images/004/162/17222000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2614,7 +2181,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw876f7d3b/images/004/162/17224000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2631,7 +2198,7 @@ public class Seed
             Gender = true,
             Color = Enums.White,
             Size = Enums.Shoes42,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw792b0d75/images/004/162/17225000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2648,7 +2215,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw100c327d/images/004/163/17373000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2664,7 +2231,7 @@ public class Seed
             Gender = false,
             Color = Enums.Black,
             Size = Enums.Shoes42,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0923cee8/images/004/163/17371000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2680,7 +2247,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Shoes405,
-            Description = "",
+            Description = "Elevate your performance on the court with Nike Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, Nike Shoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Nike Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Nike Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7405cc7d/images/004/163/17372000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2698,7 +2265,7 @@ public class Seed
             Gender = true,
             Color = Enums.Red,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw66cc1a72/images/005/162/05748000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2714,7 +2281,7 @@ public class Seed
             Gender = true,
             Color = Enums.Blue,
             Size = Enums.Shoes405,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw47252ae8/images/005/158/05407000_0_1.jpg?q=80&sw=2000"
             },
 
@@ -2730,7 +2297,7 @@ public class Seed
             Gender = true,
             Color = Enums.Black,
             Size = Enums.Shoes41,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw91890a79/images/005/162/05753000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2747,7 +2314,7 @@ public class Seed
             Gender = false,
             Color = Enums.Red,
             Size = Enums.Shoes395,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw5d2d7c5b/images/005/162/05756000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2763,7 +2330,7 @@ public class Seed
             Gender = false,
             Color = Enums.Blue,
             Size = Enums.Shoes40,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6052cf2d/images/005/160/05558000_0_1.jpg?q=80&sw=640"
             },
 
@@ -2779,7 +2346,7 @@ public class Seed
             Gender = false,
             Color = Enums.Yellow,
             Size = Enums.Shoes405,
-            Description = "",
+            Description = "Elevate your performance on the court with Adidas Shoes, the ultimate fusion of style and functionality. Designed for tennis enthusiasts and athletes, these shoes deliver unmatched comfort and support for intense gameplay. Crafted with precision and expertise, AdidasShoes offer a secure fit and superior traction, ensuring quick movements and stability on any surface. The sleek design and attention to detail make them a stylish choice both on and off the court. Whether you're sprinting to the net or engaging in intense rallies, Adidas Shoes provide the perfect balance of comfort, durability, and performance. Step up your game and unleash your full potential with Adidas Shoes, the footwear of choice for champions.",
             Img = "https://global.tennis-point.com/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw47349318/images/005/158/05470000_0_1.jpg?q=80&sw=640"
             }
         };

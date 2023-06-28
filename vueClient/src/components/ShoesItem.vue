@@ -71,36 +71,45 @@
           <h5>Similar</h5>
           <div class="row simillarShoes">
             <div class="col-4 similarShoe" v-for="shoes in simillarShoes">
-              <div class="card">
-                <img v-bind:src="shoes?.img" class="card-img-top" alt="shoes" />
-                <div class="card-body">
-                  <p class="card-text">
-                    <b>{{ shoes?.brand }}</b> {{ shoes?.name }}
-                  </p>
-                  <div class="simillarShoesPrice">
-                    <span v-if="shoes?.salePrice === 0"
-                      ><b>€ {{ shoes?.price }}</b></span
-                    >
-                    <span v-else
-                      ><del>€ {{ shoes?.price }}</del> <br />
-                      <b>€ {{ shoes?.salePrice }}</b></span
-                    >
-                  </div>
-                  <div class="simillarShoesRating" v-if="shoes?.rating">
-                    <div class="ratingWrapper">
-                      <span
-                        v-for="index in Math.floor(shoes?.rating)"
-                        style="color: #ffed00"
-                        >★</span
+              <router-link
+                :to="getShoesLink(shoes.id)"
+                style="color: black; text-decoration: none"
+              >
+                <div class="card">
+                  <img
+                    v-bind:src="shoes?.img"
+                    class="card-img-top"
+                    alt="shoes"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      <b>{{ shoes?.brand }}</b> {{ shoes?.name }}
+                    </p>
+                    <div class="simillarShoesPrice">
+                      <span v-if="shoes?.salePrice === 0"
+                        ><b>€ {{ shoes?.price }}</b></span
                       >
-                      <span v-for="index in 5 - Math.floor(shoes?.rating)"
-                        >★</span
+                      <span v-else
+                        ><del>€ {{ shoes?.price }}</del> <br />
+                        <b>€ {{ shoes?.salePrice }}</b></span
                       >
-                      <span>{{ shoes?.rating }}</span>
+                    </div>
+                    <div class="simillarShoesRating" v-if="shoes?.rating">
+                      <div class="ratingWrapper">
+                        <span
+                          v-for="index in Math.floor(shoes?.rating)"
+                          style="color: #ffed00"
+                          >★</span
+                        >
+                        <span v-for="index in 5 - Math.floor(shoes?.rating)"
+                          >★</span
+                        >
+                        <span>{{ shoes?.rating }}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -114,7 +123,7 @@
 <script setup>
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUpdated } from "vue";
 import BottomPage from "./BottomPage.vue";
 
 const props = defineProps(["id"]);
@@ -177,12 +186,24 @@ const getSimillarShoes = () => {
   return simillar.slice(0, 3);
 };
 
-onMounted(() => {
+// creates link for single shoes
+const getShoesLink = (id) => {
+  return `/shoes/${id}`;
+};
+
+// loads shoes and simillar shoes state
+const processShoesState = () => {
   // set shoes
   shoes.value = shoeItems.value.find((s) => s.id === Number(props.id));
 
   // set simillar shoes
   simillarShoes.value = getSimillarShoes();
+};
+onMounted(() => {
+  processShoesState();
+});
+onUpdated(() => {
+  processShoesState();
 });
 </script>
 

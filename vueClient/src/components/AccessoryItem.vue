@@ -26,7 +26,7 @@
         <img v-bind:src="accessories?.img" alt="accessories" />
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="accessoriesgInfo3">
+        <div class="accessoriesInfo3">
           <div class="price">
             <span v-if="accessories?.salePrice === 0"
               ><b>€ {{ accessories?.price }}</b></span
@@ -37,7 +37,8 @@
             >
           </div>
           <div class="accessoriesSize">
-            <h5>Size</h5>
+            <h5 v-if="accessories.type === 'Strings'">String gauge (mm)</h5>
+            <h5 v-else>Size</h5>
             <button
               v-if="accessories.type === 'Strings'"
               v-for="size in stringsSizes"
@@ -75,43 +76,49 @@
               class="col-4 similarAccessory"
               v-for="accessories in simillarAccessories"
             >
-              <div class="card">
-                <img
-                  v-bind:src="accessories?.img"
-                  class="card-img-top"
-                  alt="clothing"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <b>{{ accessories?.brand }}</b> {{ accessories?.name }}
-                  </p>
-                  <div class="simillarAccessoriesPrice">
-                    <span v-if="accessories?.salePrice === 0"
-                      ><b>€ {{ accessories?.price }}</b></span
-                    >
-                    <span v-else
-                      ><del>€ {{ accessories?.price }}</del> <br />
-                      <b>€ {{ accessories?.salePrice }}</b></span
-                    >
-                  </div>
-                  <div
-                    class="simillarAccessoriesRating"
-                    v-if="accessories?.rating"
-                  >
-                    <div class="ratingWrapper">
-                      <span
-                        v-for="index in Math.floor(accessories?.rating)"
-                        style="color: #ffed00"
-                        >★</span
+              <router-link
+                :to="getAccessoryLink(accessories?.id)"
+                style="color: black; text-decoration: none"
+              >
+                <div class="card">
+                  <img
+                    v-bind:src="accessories?.img"
+                    class="card-img-top"
+                    alt="clothing"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      <b>{{ accessories?.brand }}</b> {{ accessories?.name }}
+                    </p>
+                    <div class="simillarAccessoriesPrice">
+                      <span v-if="accessories?.salePrice === 0"
+                        ><b>€ {{ accessories?.price }}</b></span
                       >
-                      <span v-for="index in 5 - Math.floor(accessories?.rating)"
-                        >★</span
+                      <span v-else
+                        ><del>€ {{ accessories?.price }}</del> <br />
+                        <b>€ {{ accessories?.salePrice }}</b></span
                       >
-                      <span>{{ accessories?.rating }}</span>
+                    </div>
+                    <div
+                      class="simillarAccessoriesRating"
+                      v-if="accessories?.rating"
+                    >
+                      <div class="ratingWrapper">
+                        <span
+                          v-for="index in Math.floor(accessories?.rating)"
+                          style="color: #ffed00"
+                          >★</span
+                        >
+                        <span
+                          v-for="index in 5 - Math.floor(accessories?.rating)"
+                          >★</span
+                        >
+                        <span>{{ accessories?.rating }}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -125,7 +132,7 @@
 <script setup>
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUpdated } from "vue";
 import BottomPage from "./BottomPage.vue";
 
 const props = defineProps(["id"]);
@@ -178,7 +185,13 @@ const getSimillarAccessories = () => {
   return simillar.slice(0, 3);
 };
 
-onMounted(() => {
+// creates link for single accessory
+const getAccessoryLink = (id) => {
+  return `/accessory/${id}`;
+};
+
+// loads accessory and simillar accessories state
+const processAccessoryState = () => {
   // set accessories
   accessories.value = accessoryItems.value.find(
     (a) => a.id === Number(props.id)
@@ -186,6 +199,14 @@ onMounted(() => {
 
   // set simillar clothings
   simillarAccessories.value = getSimillarAccessories();
+};
+
+onMounted(() => {
+  processAccessoryState();
+});
+
+onUpdated(() => {
+  processAccessoryState();
 });
 </script>
 

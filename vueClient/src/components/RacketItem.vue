@@ -70,40 +70,45 @@
           <h5>Similar</h5>
           <div class="row simillarRackets">
             <div class="col-4 similarRacket" v-for="racket in simillarRackets">
-              <div class="card">
-                <img
-                  v-bind:src="racket?.img"
-                  class="card-img-top"
-                  alt="racket"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <b>{{ racket?.brand }}</b> {{ racket?.name }}
-                  </p>
-                  <div class="simillarRacketPrice">
-                    <span v-if="racket?.salePrice === 0"
-                      ><b>€ {{ racket?.price }}</b></span
-                    >
-                    <span v-else
-                      ><del>€ {{ racket?.price }}</del> <br />
-                      <b>€ {{ racket?.salePrice }}</b></span
-                    >
-                  </div>
-                  <div class="simillarRacketRating" v-if="racket?.rating">
-                    <div class="ratingWrapper">
-                      <span
-                        v-for="index in Math.floor(racket?.rating)"
-                        style="color: #ffed00"
-                        >★</span
+              <router-link
+                :to="getRacketLink(racket.id)"
+                style="color: black; text-decoration: none"
+              >
+                <div class="card">
+                  <img
+                    v-bind:src="racket?.img"
+                    class="card-img-top"
+                    alt="racket"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      <b>{{ racket?.brand }}</b> {{ racket?.name }}
+                    </p>
+                    <div class="simillarRacketPrice">
+                      <span v-if="racket?.salePrice === 0"
+                        ><b>€ {{ racket?.price }}</b></span
                       >
-                      <span v-for="index in 5 - Math.floor(racket?.rating)"
-                        >★</span
+                      <span v-else
+                        ><del>€ {{ racket?.price }}</del> <br />
+                        <b>€ {{ racket?.salePrice }}</b></span
                       >
-                      <span>{{ racket?.rating }}</span>
+                    </div>
+                    <div class="simillarRacketRating" v-if="racket?.rating">
+                      <div class="ratingWrapper">
+                        <span
+                          v-for="index in Math.floor(racket?.rating)"
+                          style="color: #ffed00"
+                          >★</span
+                        >
+                        <span v-for="index in 5 - Math.floor(racket?.rating)"
+                          >★</span
+                        >
+                        <span>{{ racket?.rating }}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -117,7 +122,7 @@
 <script setup>
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUpdated } from "vue";
 import BottomPage from "./BottomPage.vue";
 
 const props = defineProps(["id"]);
@@ -168,12 +173,26 @@ const getSimillarRackets = () => {
   return simillar.slice(0, 3);
 };
 
-onMounted(() => {
+// creates link for single racket
+const getRacketLink = (id) => {
+  return `/racket/${id}`;
+};
+
+// loads racket and simillar accessories racket
+const processRacketState = () => {
   // set racket
   racket.value = racketItems.value.find((r) => r.id === Number(props.id));
 
   // set simillar rackets
   simillarRackets.value = getSimillarRackets();
+};
+
+onMounted(() => {
+  processRacketState();
+});
+
+onUpdated(() => {
+  processRacketState();
 });
 </script>
 
