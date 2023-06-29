@@ -64,7 +64,8 @@ export const shopStore = defineStore('shop', () => {
     }
 
     function removeFromShoppingCart(itemId) {
-        shoppingCart.value = shoppingCart.value.filter(s => s.id !== itemId);
+        shoppingCart.value = shoppingCart.value.filter(s => s.item.id !== itemId);
+        console.log(shoppingCart.value)
     }
 
     //private functions
