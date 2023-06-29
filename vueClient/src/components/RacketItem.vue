@@ -53,7 +53,9 @@
             <input type="number" v-model="racketAmount" />
             <button @click="incrementAmount">+</button>
           </div>
-          <button class="btn btn-success">Add to cart</button>
+          <button class="btn btn-success" @click="addToCart">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
@@ -191,9 +193,11 @@ onMounted(() => {
   processRacketState();
 });
 
-onUpdated(() => {
-  processRacketState();
-});
+// add item to cart
+const addToCart = () => {
+  store.addToShoppingCart({ item: racket.value, amount: racketAmount.value });
+  racketAmount.value = 1;
+};
 </script>
 
 <style lang="scss">

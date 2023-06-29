@@ -29,7 +29,16 @@
             <div class="userThing">
               <a href="/cart">
                 <img src="../img/cart-icon.svg" alt="cart" />
-                <p>Cart</p>
+                <p
+                  v-if="
+                    shoppingCart !== undefined &&
+                    Array.isArray(shoppingCart) &&
+                    shoppingCart.length > 0
+                  "
+                >
+                  Cart {{ shoppingCart.length }}
+                </p>
+                <p v-else>Cart</p>
               </a>
             </div>
           </div>
@@ -70,6 +79,15 @@
     </nav>
   </div>
 </template>
+
+<script setup>
+import { storeToRefs } from "pinia";
+import { shopStore } from "../stores/shop";
+
+const store = shopStore();
+
+const { shoppingCart } = storeToRefs(store);
+</script>
 
 <style lang="scss">
 @import "../assets/_sass";

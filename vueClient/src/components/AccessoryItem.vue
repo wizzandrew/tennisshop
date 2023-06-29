@@ -56,7 +56,9 @@
             <input type="number" v-model="accessoriesAmount" />
             <button @click="incrementAmount">+</button>
           </div>
-          <button class="btn btn-success">Add to cart</button>
+          <button class="btn btn-success" @click="addToCart">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
@@ -205,9 +207,14 @@ onMounted(() => {
   processAccessoryState();
 });
 
-onUpdated(() => {
-  processAccessoryState();
-});
+// add item to cart
+const addToCart = () => {
+  store.addToShoppingCart({
+    item: accessories.value,
+    amount: accessoriesAmount.value,
+  });
+  accessoriesAmount.value = 1;
+};
 </script>
 
 <style lang="scss">

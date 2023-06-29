@@ -55,7 +55,9 @@
             <input type="number" v-model="clothingAmount" />
             <button @click="incrementAmount">+</button>
           </div>
-          <button class="btn btn-success">Add to cart</button>
+          <button class="btn btn-success" @click="addToCart">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
@@ -200,9 +202,14 @@ onMounted(() => {
   processClothingState();
 });
 
-onUpdated(() => {
-  processClothingState();
-});
+// add item to cart
+const addToCart = () => {
+  store.addToShoppingCart({
+    item: clothing.value,
+    amount: clothingAmount.value,
+  });
+  clothingAmount.value = 1;
+};
 </script>
 
 <style lang="scss">

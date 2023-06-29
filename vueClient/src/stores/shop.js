@@ -9,6 +9,7 @@ export const shopStore = defineStore('shop', () => {
     const shopItems = useLocalStorage('shopitems', []);
     const newArrivals = useLocalStorage('newarrivals', []);
     const topSellers = useLocalStorage('topsellers', []);
+    const shoppingCart = useLocalStorage('shoppingcart', []);
 
     //computed
     const accessoryItems = computed(() => {
@@ -42,6 +43,28 @@ export const shopStore = defineStore('shop', () => {
 
     function setTopSellers(sellers) {
         topSellers.value = sellers;
+    }
+
+    function setShoppingCart(cart) {
+        shoppingCart.value = cart;
+    }
+
+    function addToShoppingCart(item) {
+
+        // make sure to increment only amount if item to add is already in the shoppingCart
+        const existingItem = shoppingCart.value.find(s => s.item.id === item.item.id)
+
+        if (existingItem) {
+            shoppingCart.value.forEach(s => {
+                if (s.item.id === item.item.id) { s.amount++ }
+            });
+        } else {
+            shoppingCart.value.push(item);
+        }
+    }
+
+    function removeFromShoppingCart(itemId) {
+        shoppingCart.value = shoppingCart.value.filter(s => s.id !== itemId);
     }
 
     //private functions
@@ -129,8 +152,8 @@ export const shopStore = defineStore('shop', () => {
     }
 
     return {
-        newArrivals, topSellers, shopItems,
+        newArrivals, topSellers, shopItems, shoppingCart,
         accessoryItems, clothingItems, shoeItems, racketItems, newArrivalItems, topSellersItems,
-        setShopItems, setNewArrivals, setTopSellers
+        setShopItems, setNewArrivals, setTopSellers, setShoppingCart, addToShoppingCart, removeFromShoppingCart
     }
 })
