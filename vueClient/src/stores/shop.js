@@ -9,6 +9,7 @@ export const shopStore = defineStore('shop', () => {
     const shopItems = useLocalStorage('shopitems', []);
     const newArrivals = useLocalStorage('newarrivals', []);
     const topSellers = useLocalStorage('topsellers', []);
+    const user = useLocalStorage('user', {});
     const shoppingCart = useLocalStorage('shoppingcart', []);
 
     //computed
@@ -43,6 +44,10 @@ export const shopStore = defineStore('shop', () => {
 
     function setTopSellers(sellers) {
         topSellers.value = sellers;
+    }
+
+    function setUser(_user) {
+        user.value = _user;
     }
 
     function setShoppingCart(cart) {
@@ -153,8 +158,8 @@ export const shopStore = defineStore('shop', () => {
     }
 
     return {
-        newArrivals, topSellers, shopItems, shoppingCart,
+        newArrivals, topSellers, shopItems, user, shoppingCart,
         accessoryItems, clothingItems, shoeItems, racketItems, newArrivalItems, topSellersItems,
-        setShopItems, setNewArrivals, setTopSellers, setShoppingCart, addToShoppingCart, removeFromShoppingCart
+        setShopItems, setNewArrivals, setTopSellers, setUser, setShoppingCart, addToShoppingCart, removeFromShoppingCart
     }
 })

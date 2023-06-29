@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row cartHeading">
-      <div>My cart</div>
+      <div>My Cart</div>
       <div v-if="shoppingCart?.length === 1">
         {{ shoppingCart?.length }} item in shopping cart
       </div>
@@ -102,7 +102,12 @@
         <div class="cartGrandTotal">
           <p>Grand total (incl. VAT) {{ shoppingCartTotal() }}</p>
         </div>
-        <button class="btn btn-success">Go to checkout</button>
+        <router-link
+          to="/cartUserInfo"
+          style="color: black; text-decoration: none"
+        >
+          <button class="btn btn-success">Go to checkout</button>
+        </router-link>
       </div>
     </div>
   </div>

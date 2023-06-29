@@ -95,4 +95,35 @@ async function getTopSellers() {
 
 }
 
-export { getShopItems, getNewArrivals, getTopSellers }
+async function getUser() {
+
+    // variables for json response and result
+    let response;
+    let result;
+
+    try {
+        response = await fetch(URL + "User");
+    } catch (error) {
+        console.log("getUser " + error);
+    }
+
+    if (response !== undefined) {
+        if (response.ok) {
+            await response
+                .json()
+                .then((data) => (result = data))
+                .catch((err) => console.log(err));
+
+            // return json result
+            return result;
+        } else {
+            throw new Error("\nStatus: " + response.status + " " + response.statusText);
+        }
+    }
+    else {
+        return null;
+    }
+
+}
+
+export { getShopItems, getNewArrivals, getTopSellers, getUser }

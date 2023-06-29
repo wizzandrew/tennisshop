@@ -256,6 +256,17 @@ onMounted(async () => {
   } catch (error) {
     console.log(error);
   }
+
+  //fetching user info
+  try {
+    const user = await api.getUser();
+    if (user !== undefined && user !== null) {
+      store.setUser(user);
+      console.log("user ", user);
+    }
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 // onUpdated(() => {
