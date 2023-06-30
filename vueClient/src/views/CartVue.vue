@@ -96,11 +96,11 @@
       </div>
       <div class="col-12 order-first col-md-6 order-md-last">
         <div class="cartTotal">
-          <p>Total products (incl. tax) {{ shoppingCartTotal() }}</p>
+          <p>Total products (incl. tax) € {{ cartTotal }}</p>
           <p>Shipping costs € 0.00</p>
         </div>
         <div class="cartGrandTotal">
-          <p>Grand total (incl. VAT) {{ shoppingCartTotal() }}</p>
+          <p>Grand total (incl. VAT) € {{ cartTotal }}</p>
         </div>
         <router-link
           to="/cartUserInfo"
@@ -114,6 +114,7 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
 
@@ -122,7 +123,7 @@ const store = shopStore();
 const { shoppingCart } = storeToRefs(store);
 
 // calculate shppings cart total
-const shoppingCartTotal = () => {
+const cartTotal = computed(() => {
   let total = 0;
 
   shoppingCart.value?.forEach((s) => {
@@ -130,7 +131,7 @@ const shoppingCartTotal = () => {
     total = total + price * s.amount;
   });
   return total;
-};
+});
 
 const removeShopItem = (id) => {
   store.removeFromShoppingCart(id);

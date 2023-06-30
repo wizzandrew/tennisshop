@@ -77,9 +77,13 @@
           <div class="card-body">
             <h5 class="card-title">Shipping Address</h5>
             <div>
-              <p>{{ user?.address.street }}, {{ user?.address.apartmentNo }}</p>
-              <p>{{ user?.address.postalCode }} {{ user?.address.city }}</p>
-              <p>{{ user?.address.country }}</p>
+              <p>
+                {{ user?.name }} <br />
+                {{ user?.address.street }}, {{ user?.address.apartmentNo }}
+                <br />
+                {{ user?.address.postalCode }} {{ user?.address.city }} <br />
+                {{ user?.address.country }}
+              </p>
             </div>
           </div>
         </div>
@@ -94,7 +98,12 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-success">Check & Order</button>
+        <router-link
+          to="/cartCheckOrder"
+          style="color: black; text-decoration: none"
+        >
+          <button class="btn btn-success">Check & Order</button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -108,7 +117,6 @@ import { storeToRefs } from "pinia";
 const store = shopStore();
 
 const { user } = storeToRefs(store);
-console.log(user);
 </script>
 
 <style lang="scss">

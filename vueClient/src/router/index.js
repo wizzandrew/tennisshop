@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/CartUserInfoVue.vue')
     },
     {
+      path: '/cartCheckOrder',
+      name: 'cart-check-order',
+      component: () => import('../views/CartCheckOrderVue.vue')
+    },
+    {
       path: '/rackets',
       name: 'rackets',
       component: () => import('../views/RacketsVue.vue')
