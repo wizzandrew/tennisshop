@@ -126,4 +126,69 @@ async function getUser() {
 
 }
 
-export { getShopItems, getNewArrivals, getTopSellers, getUser }
+async function postCart(shoppingCart, orderTotal) {
+
+    // variables for json response
+    let response;
+
+    // create request body
+    const orderItems = [];
+    shoppingCart?.map(s => {
+        orderItems.push({
+            id: 0,
+            item: {
+                id: s.item.id,
+                name: "",
+                brand: "",
+                price: 0,
+                salePrice: 0,
+                quantity: 0,
+                rating: 0,
+                popular: false,
+                description: "",
+                img: ""
+            },
+            quantity: s.amount
+        })
+    });
+
+    const requestBody = {
+        orderNo: "Ord" + Math.floor(Math.random() * Date.now()).toString(16),
+        date: new Date(),
+        total: orderTotal,
+        orderStatus: "Processing",
+        items: orderItems
+    }
+
+    try {
+        response = await fetch(URL + "Order/createorder", {
+            method: "POST",
+            body: JSON.stringify(requestBody),
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "same-origin",
+        });
+    } catch (error) {
+        console.log("postCart " + error);
+    }
+
+    if (response !== undefined) {
+        if (response.ok) {
+
+            alert(`Order No${requestBody.orderNo} placed.`);
+
+            return true;
+
+        } else {
+            throw new Error("\nStatus: " + response.status + " " + response.statusText);
+        }
+    }
+    else {
+        return null;
+    }
+
+}
+
+
+export { getShopItems, getNewArrivals, getTopSellers, getUser, postCart }

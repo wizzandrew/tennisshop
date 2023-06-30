@@ -97,7 +97,14 @@
                 Shipping €19.99
               </p>
               <p><b>Total</b> €{{ cartTotal + 19.99 }}</p>
-              <button class="btn btn-success">Buy now</button>
+              <router-link to="/" style="color: black; text-decoration: none">
+                <button
+                  class="btn btn-success"
+                  @click="placeOrder(shoppingCart, cartTotal)"
+                >
+                  Buy now
+                </button>
+              </router-link>
             </div>
           </div>
         </div>
@@ -110,6 +117,7 @@
 import { computed } from "vue";
 import { shopStore } from "../stores/shop";
 import { storeToRefs } from "pinia";
+import * as api from "../shared/api.mjs";
 
 const store = shopStore();
 
@@ -126,14 +134,25 @@ const cartTotal = computed(() => {
   });
   return total;
 });
+
+const placeOrder = async (shoppingCart, orderTotal) => {
+  // make sure shoppingCart contains shopping items
+  if (Array.isArray(shoppingCart) && shoppingCart.length > 0) {
+    try {
+      const response = await api.postCart(shoppingCart, orderTotal);
+      if (response == true) {
+        store.setShoppingCart([]);
+        console.log("order placed ");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
 </script>
 
 <style lang="scss">
 @import "../assets/sass";
-
-.headerHolder {
-  display: none;
-}
 
 .cartHeader {
   .cartSteps {

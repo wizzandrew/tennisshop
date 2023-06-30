@@ -1,6 +1,12 @@
 <template>
   <div class="app">
-    <div>
+    <div
+      v-show="
+        $route.path !== '/cart' &&
+        $route.path !== '/cartUserInfo' &&
+        $route.path !== '/cartCheckOrder'
+      "
+    >
       <Header />
     </div>
 

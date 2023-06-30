@@ -141,10 +141,6 @@ const removeShopItem = (id) => {
 <style lang="scss">
 @import "../assets/sass";
 
-.headerHolder {
-  display: none;
-}
-
 .cartHeader {
   .cartSteps {
     @include displayFlex(row);
