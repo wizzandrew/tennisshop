@@ -71,12 +71,18 @@ const router = createRouter({
       path: '/accessory/:id',
       name: 'accessory-item',
       component: () => import('../components/AccessoryItem.vue'), props: true
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: () => import('../views/SearchVue.vue'),
+      props: true
     }
   ],
   scrollBehavior(to, from, savedPosition) {
     // always scroll to top
     return { top: 0 }
   }
-})
+});
 
-export default router
+export default router;

@@ -13,10 +13,17 @@
                 type="search"
                 placeholder=""
                 aria-label="Search"
+                v-model="searchInput"
               />
-              <button class="btn btn-outline-secondary" type="submit">
-                Search
-              </button>
+              <router-link
+                :to="{ name: 'search', query: { searchString: searchInput } }"
+                style="color: black; text-decoration: none"
+                @click="setSearchUpdated"
+              >
+                <button class="btn btn-outline-secondary" type="submit">
+                  Search
+                </button>
+              </router-link>
             </form>
           </div>
           <div class="userThings">
@@ -83,10 +90,22 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { shopStore } from "../stores/shop";
+import { searchStore } from "../stores/search-store";
+import { ref } from "vue";
 
-const store = shopStore();
+const _shopStore = shopStore();
+const _searchStore = searchStore();
 
-const { shoppingCart } = storeToRefs(store);
+const { shoppingCart } = storeToRefs(_shopStore);
+const { searchUpdated } = storeToRefs(_searchStore);
+
+const searchInput = ref("");
+
+// set search query
+const setSearchUpdated = () => {
+  _searchStore.setSearchUpdate(false);
+  console.log("search click: " + searchUpdated.value);
+};
 </script>
 
 <style lang="scss">

@@ -96,6 +96,7 @@
   <div class="container">
     <div class="newArrivalsHeading">
       <h2><span>NEW ARRIVALS</span></h2>
+      <button class="btn btn-success" @click="navigate">Navigate</button>
     </div>
   </div>
 
@@ -218,6 +219,12 @@ import * as api from "../shared/api.mjs";
 import NewArrivalsSlider from "../components/NewArrivalsSlider.vue";
 import TopSellersSlider from "../components/TopSellersSlider.vue";
 import BottomPage from "../components/BottomPage.vue";
+
+import router from "../router/index";
+
+const navigate = () => {
+  router.push({ path: "/shoes" });
+};
 
 // pinia
 const store = shopStore();
