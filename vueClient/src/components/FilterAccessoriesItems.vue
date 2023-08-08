@@ -254,6 +254,7 @@ const dynamicAttr = (property, string) => {
 
 .filterWrapper {
   @include filterItems;
+  @include scrollBar;
 
   .typeFilter {
     .list-group {
@@ -267,6 +268,14 @@ const dynamicAttr = (property, string) => {
           font-weight: 600;
         }
       }
+    }
+  }
+
+  .colourFilter {
+    .colours-list {
+      height: 120px;
+      overflow: hidden;
+      overflow-y: scroll;
     }
   }
 }
