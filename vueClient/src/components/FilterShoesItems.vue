@@ -271,51 +271,22 @@ const dynamicAttr = (property, string) => {
 @import "../assets//sass";
 
 .filterWrapper {
-  padding-top: 219px;
+  @include filterItems;
+  @include scrollBar;
 
-  .priceInputs {
-    width: 100%;
-    .price-content {
-      @include displayFlex(row);
-      align-items: center;
-
-      input {
-        width: 70px;
-      }
+  .sizeFilter {
+    .sizes-list {
+      height: 120px;
+      overflow: hidden;
+      overflow-y: scroll;
     }
+  }
 
-    .range-slider {
-      width: auto;
-      position: relative;
-      margin: 15px 0 30px 0;
-
-      input[type="range"] {
-        appearance: none;
-        width: 100%;
-        background: transparent;
-        position: absolute;
-        left: 0;
-      }
-
-      input[type="range"]::-webkit-slider-thumb {
-        appearance: none;
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        background: white;
-        cursor: pointer;
-        margin-top: -5px;
-        position: relative;
-        z-index: 1;
-      }
-
-      input[type="range"]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 5px;
-        background: $theYellow;
-        border-radius: 3px;
-        border: none;
-      }
+  .colourFilter {
+    .colours-list {
+      height: 120px;
+      overflow: hidden;
+      overflow-y: scroll;
     }
   }
 }
