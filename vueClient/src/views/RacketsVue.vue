@@ -43,9 +43,11 @@
                     <img v-bind:src="racket.img" alt="racket" />
                   </div>
                   <div class="col-7">
-                    <p>
-                      <b>{{ racket.brand }}</b> {{ racket.name }}
-                    </p>
+                    <div class="racketName">
+                      <p>
+                        <b>{{ racket.brand }}</b> <br />{{ racket.name }}
+                      </p>
+                    </div>
                     <div class="racketPrice">
                       <span v-if="racket.salePrice === 0"
                         ><b>€ {{ racket.price }}</b></span
@@ -55,32 +57,35 @@
                         <b>€ {{ racket.salePrice }}</b></span
                       >
                     </div>
-                    <div class="racketRating" v-if="racket.popular">
-                      <div class="ratingWrapper">
-                        <span
-                          v-for="index in Math.floor(racket.rating)"
-                          style="color: #ffed00"
-                          >★</span
-                        >
-                        <span v-for="index in 5 - Math.floor(racket.rating)"
-                          >★</span
-                        >
+                    <div>
+                      <div class="racketRating" v-if="racket.popular">
+                        <div class="ratingWrapper">
+                          <span
+                            v-for="index in Math.floor(racket.rating)"
+                            style="color: #ffed00"
+                            >★</span
+                          >
+                          <span v-for="index in 5 - Math.floor(racket.rating)"
+                            >★</span
+                          >
+                        </div>
+                        <p>{{ racket.rating }}</p>
                       </div>
-                      <p>Rating {{ racket.rating }}</p>
+                      <div class="racketRating" v-else></div>
                     </div>
                     <hr />
                     <div class="racketFeatures">
                       <div class="racketHead">
-                        <img src="../img/racket-icon2.png" />
-                        <span>{{ racket.headSize }}cm<sup>2</sup></span>
+                        <img src="../img/racket-icon24.svg" />
+                        <span>{{ racket.headSize }} cm<sup>2</sup></span>
                       </div>
                       <div class="racketGrip">
-                        <img src="../img/grip-icon.png" />
+                        <img src="../img/grip-icon4.svg" />
                         <span>{{ racket.gripSize }}</span>
                       </div>
                       <div class="racketWeight">
-                        <img src="../img/weight-icon.png" />
-                        <span>{{ racket.weight }}g</span>
+                        <img src="../img/weight-icon4.svg" />
+                        <span>{{ racket.weight }} g</span>
                       </div>
                     </div>
                   </div>
@@ -258,7 +263,7 @@ const manageFiltering = (args) => {
 }
 
 .racketsHeading {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   h3 {
     font-weight: 600;
     color: #424242;
@@ -266,6 +271,10 @@ const manageFiltering = (args) => {
 }
 
 .racketsInfoSorting {
+  .row {
+    align-items: center;
+  }
+
   .racketsInfo,
   .racketsSorting {
     font-size: 14px;
@@ -274,31 +283,113 @@ const manageFiltering = (args) => {
   .racketsSorting {
     @include displayFlex(row);
     justify-content: flex-end;
+    align-items: center;
 
     div {
-      padding-left: 30px;
+      padding-left: 20px;
     }
   }
 }
 
 .racketsWrapper {
-  padding-top: 50px;
+  padding-top: 30px;
 
-  .racket {
-    margin-bottom: 20px;
-    display: flex;
-    border: 1px solid grey;
+  .row {
+    width: 100%;
+    margin: 0 auto;
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+    .racket {
+      padding: 0;
 
-    .racketFeatures {
-      @include displayFlex(row);
-      img {
-        height: 28px;
-        width: 28px;
+      a {
+        @include displayFlex(row);
+        margin-bottom: 20px;
+        padding: 40px 0;
+        display: flex;
+        border: 1px solid rgb(225, 225, 225);
+        font-size: 14px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .racketName {
+          width: 80%;
+
+          p {
+            min-height: 65px;
+          }
+        }
+
+        .racketPrice {
+          min-height: 42px;
+
+          del {
+            padding-left: 2.5px;
+            font-size: 12px;
+            color: grey;
+          }
+          margin-bottom: 7px;
+        }
+
+        .racketRating {
+          @include displayFlex(row);
+          align-items: center;
+          min-height: 36px;
+
+          .ratingWrapper {
+            span {
+              font-size: 24px;
+            }
+          }
+          p {
+            margin: 0;
+            padding-top: 4px;
+          }
+        }
+
+        hr {
+          width: 68%;
+          margin-bottom: 8px;
+          color: #949494;
+        }
+
+        .racketFeatures {
+          @include displayFlex(row);
+
+          .racketHead,
+          .racketGrip,
+          .racketWeight {
+            @include displayFlex(column);
+
+            img {
+              height: 32px;
+              width: auto;
+              margin: 0 auto;
+            }
+
+            span {
+              color: #949494;
+              padding-top: 2px;
+            }
+          }
+
+          .racketGrip {
+            padding: 0 20px;
+            span {
+              width: fit-content;
+              margin: 0 auto;
+            }
+          }
+
+          .racketWeight {
+            padding: 0 5px;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        padding-right: 10px;
       }
     }
   }

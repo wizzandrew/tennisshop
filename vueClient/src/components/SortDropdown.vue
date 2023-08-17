@@ -40,10 +40,27 @@ const sort = (msg) => {
 </script>
 
 <style>
-.dropdown-menu {
-  .dropdown-item {
-    &:hover {
-      cursor: pointer;
+.dropdown {
+  .dropdown-toggle {
+    background-color: #f5f5f5;
+    color: #424242;
+    border: 0;
+    font-size: 14px;
+    border-radius: 0;
+
+    &::after {
+      margin-left: 47px;
+    }
+  }
+  .dropdown-menu {
+    .dropdown-item {
+      font-size: 14px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &.show {
+      border-radius: 0;
     }
   }
 }
