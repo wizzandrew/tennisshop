@@ -52,14 +52,14 @@
                       <p class="card-text">
                         <b>{{ accessory.brand }}</b> {{ accessory.name }}
                       </p>
-                      <div class="clothingPrice">
+                      <div class="accessoryPrice">
                         <span v-if="accessory.salePrice === 0"
                           ><b>€ {{ accessory.price }}</b></span
                         >
-                        <span v-else
-                          ><del>€ {{ accessory.price }}</del> <br />
-                          <b>€ {{ accessory.salePrice }}</b></span
-                        >
+                        <span v-else>
+                          <b>€ {{ accessory.salePrice }}</b>
+                          <del>€ {{ accessory.price }}</del>
+                        </span>
                       </div>
                       <div class="accessoryRating" v-if="accessory.rating">
                         <div class="ratingWrapper">
@@ -72,9 +72,10 @@
                             v-for="index in 5 - Math.floor(accessory.rating)"
                             >★</span
                           >
-                          <span>{{ accessory.rating }}</span>
                         </div>
+                        <p>{{ accessory.rating }}</p>
                       </div>
+                      <div class="accessoryRating" v-else></div>
                     </div>
                   </div>
                 </router-link>
@@ -245,7 +246,7 @@ const manageFiltering = (args) => {
 }
 
 .accessoriesHeading {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   h3 {
     font-weight: 600;
     color: #424242;
@@ -253,27 +254,30 @@ const manageFiltering = (args) => {
 }
 
 .accessoriesInfoSorting {
-  .accessoriesInfo,
-  .accessoriesSorting {
-    font-size: 14px;
+  font-size: 14px;
+
+  .row {
+    align-items: center;
   }
 
   .accessoriesSorting {
     @include displayFlex(row);
     justify-content: flex-end;
+    align-items: center;
 
     div {
-      padding-left: 30px;
+      padding-left: 20px;
     }
   }
 }
 
 .accessoriesWrapper {
-  padding-top: 50px;
+  padding-top: 30px;
 
   .accessory {
     margin-bottom: 20px;
     @include displayFlex(row);
+    font-size: 14px;
 
     .card {
       display: flex;
@@ -284,11 +288,33 @@ const manageFiltering = (args) => {
         text-align: center;
 
         .card-text {
-          min-height: 48px;
+          min-height: 63px;
         }
 
-        del {
-          padding-left: 20px;
+        .accessoryPrice {
+          del {
+            padding-left: 10px;
+            color: grey;
+          }
+        }
+
+        .accessoryRating {
+          @include displayFlex(row);
+          align-items: center;
+          justify-content: center;
+          min-height: 36px;
+
+          .ratingWrapper {
+            span {
+              font-size: 24px;
+            }
+          }
+
+          p {
+            display: inline-block;
+            margin: 0;
+            padding-top: 4px;
+          }
         }
       }
     }
