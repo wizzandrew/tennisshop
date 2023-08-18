@@ -271,13 +271,10 @@ const manageFiltering = (args) => {
 }
 
 .racketsInfoSorting {
+  font-size: 14px;
+
   .row {
     align-items: center;
-  }
-
-  .racketsInfo,
-  .racketsSorting {
-    font-size: 14px;
   }
 
   .racketsSorting {
