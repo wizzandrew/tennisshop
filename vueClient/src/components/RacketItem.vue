@@ -1,23 +1,29 @@
 <template>
   <div class="container" v-if="racket != undefined">
-    <div class="row">
+    <div class="row racketSection1">
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="racketInfo1">
-          <h5>{{ racket?.brand }}</h5>
-          <span>{{ racket?.name }}</span>
-          <div>
-            <span
-              v-for="index in Math.floor(racket?.rating)"
-              style="color: #ffed00"
-              >★</span
-            >
-            <span v-for="index in 5 - Math.floor(racket?.rating)">★</span>
-            <span>{{ racket?.rating }}</span>
+        <div class="racketName">
+          <h4>{{ racket?.brand }}</h4>
+          <span id="racketTitle">{{ racket?.name }}</span>
+          <p class="itemNo">Item #: 0090620286300{{ racket?.id }}</p>
+          <div class="racketRating">
+            <div class="ratingWrapper">
+              <span
+                v-for="index in Math.floor(racket?.rating)"
+                style="color: #ffed00"
+                >★</span
+              >
+              <span v-for="index in 5 - Math.floor(racket?.rating)">★</span>
+            </div>
+            <p>{{ racket?.rating }}</p>
           </div>
-          <div class="racketInfo2">
+          <div class="racketFeatures">
             <ul>
-              <li>Head size {{ racket?.headSize }}cm<sup>2</sup></li>
-              <li>Weight {{ racket?.weight }}g</li>
+              <li>Head size (cm<sup>2</sup>): {{ racket?.headSize }}</li>
+              <li>Weight (g): {{ racket?.weight }}</li>
+              <li>String pattern: 16/19</li>
+              <li>Strung: No</li>
+              <li>Balance (mm): 305</li>
             </ul>
           </div>
         </div>
@@ -26,7 +32,7 @@
         <img v-bind:src="racket?.img" alt="racket" />
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="racketInfo3">
+        <div class="racketOtherFeatures">
           <div class="price">
             <span v-if="racket?.salePrice === 0"
               ><b>€ {{ racket?.price }}</b></span
@@ -46,16 +52,27 @@
             </button>
           </div>
           <div class="quantity">
-            <p v-if="racket?.quantity > 0">In Stock</p>
-            <p v-else>Out of Stock</p>
+            <p class="inStock" v-if="racket?.quantity > 0">In Stock</p>
+            <p class="outOfStock" v-else>Out Of Stock</p>
+            <p class="deliveryTime" v-if="racket?.quantity > 0">
+              Deliverytime 5 - 6 days. <br />
+              Delivery between {{ deliveryTime() }}
+            </p>
             <p><b>Quantity</b></p>
-            <button @click="decrementAmount">-</button>
-            <input type="number" v-model="racketAmount" />
-            <button @click="incrementAmount">+</button>
+            <div class="quantityCounter">
+              <button @click="decrementAmount">
+                <img src="../img/minus-icon.svg" />
+              </button>
+              <input type="number" v-model="racketAmount" />
+              <button @click="incrementAmount">
+                <img src="../img/plus-icon.svg" />
+              </button>
+            </div>
           </div>
           <button class="btn btn-success" @click="addToCart">
             Add to cart
           </button>
+          <p class="deliveryVat">incl. VAT, incl. shipping</p>
         </div>
       </div>
     </div>
@@ -63,13 +80,16 @@
       <div class="col col-md-6">
         <div class="racketDescription">
           <h5>Description</h5>
-          <p>{{ racket?.brand }} {{ racket?.name }}</p>
+          <p class="racketDescName">
+            {{ racket?.brand }} <br />
+            {{ racket?.name }}
+          </p>
           <p>{{ racket?.description }}</p>
         </div>
       </div>
       <div class="col col-md-6">
         <div class="simillarRacketsWrapper">
-          <h5>Similar</h5>
+          <h5>Similar Products</h5>
           <div class="row simillarRackets">
             <div class="col-4 similarRacket" v-for="racket in simillarRackets">
               <router-link
@@ -84,16 +104,17 @@
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      <b>{{ racket?.brand }}</b> {{ racket?.name }}
+                      <b>{{ racket?.brand }}</b> <br />
+                      {{ racket?.name }}
                     </p>
                     <div class="simillarRacketPrice">
                       <span v-if="racket?.salePrice === 0"
                         ><b>€ {{ racket?.price }}</b></span
                       >
                       <span v-else
-                        ><del>€ {{ racket?.price }}</del> <br />
-                        <b>€ {{ racket?.salePrice }}</b></span
-                      >
+                        ><b>€ {{ racket?.salePrice }}</b>
+                        <del>€ {{ racket?.price }}</del>
+                      </span>
                     </div>
                     <div class="simillarRacketRating" v-if="racket?.rating">
                       <div class="ratingWrapper">
@@ -105,9 +126,10 @@
                         <span v-for="index in 5 - Math.floor(racket?.rating)"
                           >★</span
                         >
-                        <span>{{ racket?.rating }}</span>
                       </div>
+                      <p>{{ racket?.rating }}</p>
                     </div>
+                    <div class="simillarRacketRating" v-else></div>
                   </div>
                 </div>
               </router-link>
@@ -198,35 +220,168 @@ const addToCart = () => {
   store.addToShoppingCart({ item: racket.value, amount: racketAmount.value });
   racketAmount.value = 1;
 };
+
+// calculate delivery time
+const deliveryTime = () => {
+  // get todays date
+  const now = new Date();
+
+  // construct 5 days ahead date
+  const fiveDaysAhead = new Date();
+  fiveDaysAhead.setDate(now.getDate() + 5);
+
+  // construct 6 days ahead date
+  const sixDaysAhead = new Date();
+  sixDaysAhead.setDate(now.getDate() + 6);
+
+  // return string
+  return `${fiveDaysAhead.toDateString()} - ${sixDaysAhead.toDateString()}`;
+};
 </script>
 
 <style lang="scss">
 @import "../assets/sass";
 
-.racketInfo1 {
-  .racketInfo2 {
-    margin-top: 50px;
-  }
-}
+.racketSection1 {
+  margin-top: 55px;
+  .racketName {
+    h4 {
+      font-weight: 700;
+      color: #424242;
+    }
 
-.racketImg {
-  img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-  }
-}
+    #racketTitle {
+      font-size: 20px;
+    }
 
-.racketInfo3 {
-  .gripSize {
-    padding: 50px 0;
-    button {
-      margin-right: 10px;
+    .itemNo {
+      font-size: 14px;
+      margin-top: 0px;
+      margin-bottom: -3px;
+    }
+
+    .racketRating {
+      @include displayFlex(row);
+      align-items: center;
+
+      .ratingWrapper {
+        span {
+          font-size: 28px;
+        }
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+        padding-top: 4px;
+        padding-left: 10px;
+        font-weight: 600;
+      }
+    }
+
+    .racketFeatures {
+      margin-top: 50px;
+
+      ul {
+        li {
+          list-style-image: url("../img/list-ball-grey.svg");
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 
-  .btn-success {
-    margin-top: 20px;
+  .racketImg {
+    img {
+      height: 600px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 65% 100%;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        cursor: zoom-in;
+        transform: scale(1.125);
+      }
+    }
+  }
+
+  .racketOtherFeatures {
+    padding-left: 100px;
+    .price {
+      span {
+        del {
+          color: grey;
+        }
+
+        b {
+          font-size: 24px;
+        }
+      }
+    }
+    .gripSize {
+      padding: 30px 0 10px 0;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      button {
+        margin-right: 10px;
+        height: 40px;
+        width: 40px;
+        border: 0.5px solid rgb(183, 183, 183);
+      }
+    }
+
+    .quantity {
+      .inStock {
+        font-weight: 600;
+        color: #adce4e;
+      }
+
+      .outOfStock {
+        font-weight: 600;
+        color: rgb(193, 193, 193);
+      }
+
+      .quantityCounter {
+        button {
+          border: none;
+          background: none;
+
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+
+        input {
+          width: 70px;
+          height: 39px;
+          text-align: center;
+          padding-left: 17px;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .btn-success {
+      margin-top: 30px;
+      width: 250px;
+      height: 50px;
+      border-radius: 0;
+      background-color: #cee28e;
+      border: none;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .deliveryVat {
+      margin-top: 5px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -236,9 +391,31 @@ const addToCart = () => {
   padding-bottom: 100px;
 }
 
+.racketDescription {
+  h5 {
+    background-color: #fafafa;
+    padding: 14px 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+  .racketDescName {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
 .simillarRacketsWrapper {
+  h5 {
+    background-color: #fafafa;
+    padding: 14px 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
   .simillarRackets {
-    // @include displayFlex(row);
+    @include displayFlex(row);
+    font-size: 14px;
 
     .card {
       display: flex;
@@ -249,11 +426,33 @@ const addToCart = () => {
         text-align: center;
 
         .card-text {
-          min-height: 48px;
+          min-height: 63px;
         }
 
-        del {
-          padding-left: 20px;
+        .simillarRacketPrice {
+          del {
+            padding-left: 15px;
+            color: grey;
+          }
+        }
+
+        .simillarRacketRating {
+          @include displayFlex(row);
+          align-items: center;
+          justify-content: center;
+          min-height: 36px;
+
+          .ratingWrapper {
+            span {
+              font-size: 24px;
+            }
+          }
+
+          p {
+            display: inline-block;
+            margin: 0;
+            padding-top: 4px;
+          }
         }
       }
     }
