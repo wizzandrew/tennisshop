@@ -1,24 +1,27 @@
 <template>
   <div class="container" v-if="shoes != undefined">
-    <div class="row">
+    <div class="row shoesSection1">
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="shoesInfo1">
-          <h5>{{ shoes?.brand }}</h5>
-          <span>{{ shoes?.name }}</span>
-          <div>
-            <span
-              v-for="index in Math.floor(shoes?.rating)"
-              style="color: #ffed00"
-              >★</span
-            >
-            <span v-for="index in 5 - Math.floor(shoes?.rating)">★</span>
-            <span>{{ shoes?.rating }}</span>
+        <div class="shoesName">
+          <h4>{{ shoes?.brand }}</h4>
+          <span id="shoesTitle">{{ shoes?.name }}</span>
+          <p class="itemNo">Item #: 0090620282400{{ shoes?.id }}</p>
+          <div class="shoesRating">
+            <div class="ratingWrapper">
+              <span
+                v-for="index in Math.floor(shoes?.rating)"
+                style="color: #ffed00"
+                >★</span
+              >
+              <span v-for="index in 5 - Math.floor(shoes?.rating)">★</span>
+            </div>
+            <p>{{ shoes?.rating }}</p>
           </div>
-          <div class="shoesInfo2">
+          <div class="shoesFeatures">
             <ul>
-              <li v-if="shoes?.gender">Men</li>
-              <li v-else>Women</li>
-              <li>{{ shoes?.color }}</li>
+              <li v-if="shoes?.gender">Gender: Men</li>
+              <li v-else>Gender: Women</li>
+              <li>Colour: {{ shoes?.color }}</li>
             </ul>
           </div>
         </div>
@@ -27,7 +30,7 @@
         <img v-bind:src="shoes?.img" alt="shoes" />
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="shoesInfo3">
+        <div class="shoesOtherFeatures">
           <div class="price">
             <span v-if="shoes?.salePrice === 0"
               ><b>€ {{ shoes?.price }}</b></span
@@ -38,7 +41,7 @@
             >
           </div>
           <div class="shoesSize">
-            <h5>Shoes size</h5>
+            <h5>Size</h5>
             <button
               v-for="size in shoesSizes"
               :disabled="getSizeDynamic(size, shoes?.size)"
@@ -47,16 +50,27 @@
             </button>
           </div>
           <div class="quantity">
-            <p v-if="shoes?.quantity > 0">In Stock</p>
-            <p v-else>Out of Stock</p>
+            <p class="inStock" v-if="shoes?.quantity > 0">In Stock</p>
+            <p class="outOfStock" v-else>Out of Stock</p>
+            <p class="deliveryTime" v-if="shoes?.quantity > 0">
+              Deliverytime 5 - 6 days. <br />
+              Delivery between {{ deliveryTime() }}
+            </p>
             <p><b>Quantity</b></p>
-            <button @click="decrementAmount">-</button>
-            <input type="number" v-model="shoesAmount" />
-            <button @click="incrementAmount">+</button>
+            <div class="quantityCounter">
+              <button @click="decrementAmount">
+                <img src="../img/minus-icon.svg" />
+              </button>
+              <input type="number" v-model="shoesAmount" />
+              <button @click="incrementAmount">
+                <img src="../img/plus-icon.svg" />
+              </button>
+            </div>
           </div>
           <button class="btn btn-success" @click="addToCart">
             Add to cart
           </button>
+          <p class="deliveryVat">incl. VAT, incl. shipping</p>
         </div>
       </div>
     </div>
@@ -64,13 +78,16 @@
       <div class="col col-md-6">
         <div class="shoesDescription">
           <h5>Description</h5>
-          <p>{{ shoes?.brand }} {{ shoes?.name }}</p>
+          <p class="shoesDescName">
+            {{ shoes?.brand }} <br />
+            {{ shoes?.name }}
+          </p>
           <p>{{ shoes?.description }}</p>
         </div>
       </div>
       <div class="col col-md-6">
         <div class="simillarShoesWrapper">
-          <h5>Similar</h5>
+          <h5>Similar Products</h5>
           <div class="row simillarShoes">
             <div class="col-4 similarShoe" v-for="shoes in simillarShoes">
               <router-link
@@ -85,16 +102,17 @@
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      <b>{{ shoes?.brand }}</b> {{ shoes?.name }}
+                      <b>{{ shoes?.brand }}</b> <br />
+                      {{ shoes?.name }}
                     </p>
                     <div class="simillarShoesPrice">
-                      <span v-if="shoes?.salePrice === 0"
-                        ><b>€ {{ shoes?.price }}</b></span
-                      >
-                      <span v-else
-                        ><del>€ {{ shoes?.price }}</del> <br />
-                        <b>€ {{ shoes?.salePrice }}</b></span
-                      >
+                      <span v-if="shoes?.salePrice === 0">
+                        <b>€ {{ shoes?.price }}</b>
+                      </span>
+                      <span v-else>
+                        <b>€ {{ shoes?.salePrice }}</b>
+                        <del>€ {{ shoes?.price }}</del> <br />
+                      </span>
                     </div>
                     <div class="simillarShoesRating" v-if="shoes?.rating">
                       <div class="ratingWrapper">
@@ -106,9 +124,10 @@
                         <span v-for="index in 5 - Math.floor(shoes?.rating)"
                           >★</span
                         >
-                        <span>{{ shoes?.rating }}</span>
                       </div>
+                      <p>{{ shoes?.rating }}</p>
                     </div>
+                    <div class="simillarShoesRating" v-else></div>
                   </div>
                 </div>
               </router-link>
@@ -210,35 +229,171 @@ const addToCart = () => {
   store.addToShoppingCart({ item: shoes.value, amount: shoesAmount.value });
   shoesAmount.value = 1;
 };
+
+// calculate delivery time
+const deliveryTime = () => {
+  // get todays date
+  const now = new Date();
+
+  // construct 5 days ahead date
+  const fiveDaysAhead = new Date();
+  fiveDaysAhead.setDate(now.getDate() + 5);
+
+  // construct 6 days ahead date
+  const sixDaysAhead = new Date();
+  sixDaysAhead.setDate(now.getDate() + 6);
+
+  // return string
+  return `${fiveDaysAhead.toDateString()} - ${sixDaysAhead.toDateString()}`;
+};
 </script>
 
 <style lang="scss">
 @import "../assets/sass";
 
-.shoesInfo1 {
-  .shoesInfo2 {
-    margin-top: 50px;
-  }
-}
+.shoesSection1 {
+  margin-top: 55px;
+  margin-bottom: 60px;
+  .shoesName {
+    h4 {
+      font-weight: 700;
+      color: #424242;
+    }
 
-.shoesImg {
-  img {
-    height: 500px;
-    width: 100%;
-    object-fit: contain;
-  }
-}
+    #shoesTitle {
+      font-size: 20px;
+    }
 
-.shoesInfo3 {
-  .shoesSize {
-    padding: 50px 0;
-    button {
-      margin-right: 10px;
+    .itemNo {
+      font-size: 14px;
+      margin-top: 0px;
+      margin-bottom: -3px;
+    }
+
+    .shoesRating {
+      @include displayFlex(row);
+      align-items: center;
+
+      .ratingWrapper {
+        span {
+          font-size: 28px;
+        }
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+        padding-top: 4px;
+        padding-left: 10px;
+        font-weight: 600;
+      }
+    }
+
+    .shoesFeatures {
+      margin-top: 50px;
+
+      ul {
+        li {
+          list-style-image: url("../img/list-ball-grey.svg");
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 
-  .btn-success {
-    margin-top: 20px;
+  .shoesImg {
+    img {
+      height: 400px;
+      width: auto;
+      // object-fit: cover;
+      // object-position: 65% 100%;
+      transition: transform 0.5s ease;
+      margin-left: -20px;
+
+      &:hover {
+        cursor: zoom-in;
+        transform: scale(1.125);
+      }
+    }
+  }
+
+  .shoesOtherFeatures {
+    padding-left: 100px;
+    .price {
+      span {
+        del {
+          color: grey;
+        }
+
+        b {
+          font-size: 24px;
+        }
+      }
+    }
+    .shoesSize {
+      padding: 30px 0 10px 0;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        height: 40px;
+        width: 45px;
+        border: 0.5px solid rgb(183, 183, 183);
+      }
+    }
+
+    .quantity {
+      .inStock {
+        font-weight: 600;
+        color: #adce4e;
+      }
+
+      .outOfStock {
+        font-weight: 600;
+        color: rgb(193, 193, 193);
+      }
+
+      .quantityCounter {
+        button {
+          border: none;
+          background: none;
+
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+
+        input {
+          width: 70px;
+          height: 39px;
+          text-align: center;
+          padding-left: 17px;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .btn-success {
+      margin-top: 30px;
+      width: 250px;
+      height: 50px;
+      border-radius: 0;
+      background-color: #cee28e;
+      border: none;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .deliveryVat {
+      margin-top: 5px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -248,9 +403,31 @@ const addToCart = () => {
   padding-bottom: 100px;
 }
 
+.shoesDescription {
+  h5 {
+    background-color: #fafafa;
+    padding: 14px 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+  .shoesDescName {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
 .simillarShoesWrapper {
+  h5 {
+    background-color: #fafafa;
+    padding: 14px 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
   .simillarShoes {
-    // @include displayFlex(row);
+    @include displayFlex(row);
+    font-size: 14px;
 
     .card {
       display: flex;
@@ -261,11 +438,33 @@ const addToCart = () => {
         text-align: center;
 
         .card-text {
-          min-height: 48px;
+          min-height: 63px;
         }
 
-        del {
-          padding-left: 20px;
+        .simillarShoesPrice {
+          del {
+            padding-left: 15px;
+            color: grey;
+          }
+        }
+
+        .simillarShoesRating {
+          @include displayFlex(row);
+          align-items: center;
+          justify-content: center;
+          min-height: 36px;
+
+          .ratingWrapper {
+            span {
+              font-size: 24px;
+            }
+          }
+
+          p {
+            display: inline-block;
+            margin: 0;
+            padding-top: 4px;
+          }
         }
       }
     }
