@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JXk4DO/RTgc4isiv5GJutLEL+JQK5plIbAHZZSttblS9AHRCqauWP2Rs4FZO5uZ26yxwzXDaaHZfFufwHWz07w==",
+  "dgSpecHash": "dm7BL9x8buMob3otwzCiquEyI5kmh36uzPtF2Byxj8RXnQkzuSb4hXva80CvIXmCgLIuv7VI5fqXozKqpc+gJQ==",
   "success": true,
-  "projectFilePath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\tennisshopapi\\TennisshopApi.csproj",
+  "projectFilePath": "D:\\_Programmist\\projects-portfolio\\them\\tennisshop\\TennisshopApi\\TennisshopApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrew\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Andrew\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",

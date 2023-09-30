@@ -1,19 +1,28 @@
 <template>
   <div class="container">
     <div class="row cartHeader">
-      <div class="col-3">
+      <div class="col-3 cartNav">
         <a href="/">
           <img src="../img/tennisshop-logo.svg" alt="brand" />
         </a>
       </div>
-      <div class="col-6 offset-3 cartSteps">
-        <div class="col-4 cartStep"><p>Cart</p></div>
-        <div class="col-4 cartStep"><p>My data & Payment</p></div>
-        <div class="col-4 cartStep"><p>Check & Order</p></div>
+      <div class="col-5 offset-4 cartSteps3">
+        <div class="col-3 cartStep">
+          <span>1</span>
+          <p>Cart</p>
+        </div>
+        <div class="col-5 cartStep">
+          <span>2</span>
+          <p>My data & Payment</p>
+        </div>
+        <div class="col-4 cartStep">
+          <span>3</span>
+          <p>Check & Order</p>
+        </div>
       </div>
     </div>
     <div class="row cartHeading">
-      <div>Check & Order Summary</div>
+      <div class="cartName">Check & Order Summary</div>
     </div>
     <div class="row cartSummary">
       <div class="col-12 col-md-7 shoppingItems">
@@ -21,7 +30,7 @@
           class="col-12 shoppingItemsWrapper"
           v-if="shoppingCart?.length > 0"
         >
-          <div class="col-4 offset-1">Article</div>
+          <div class="col-5"><span>Article</span></div>
           <div class="col-1">Size</div>
           <div class="col-1">Quantity</div>
           <div class="col-1 offset-1">Price</div>
@@ -67,7 +76,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Shipping Address</h5>
-            <div>
+            <div class="card-div">
               <p>
                 {{ user?.name }} <br />
                 {{ user?.address.street }}, {{ user?.address.apartmentNo }}
@@ -80,8 +89,8 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Preferred payment method</h5>
-            <div class="paymentMethods">
+            <h5 class="card-title">My preferred payment method</h5>
+            <div class="card-div paymentMethods">
               <img src="../img/cards-americanexpress.svg" alt="amex" />
               <img src="../img/cards-visa.svg" alt="visa" />
               <img src="../img/cards-master.svg" alt="master" />
@@ -90,21 +99,32 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">InvoiceAmount</h5>
-            <div>
-              <p>
-                Subtotal €{{ cartTotal }} <br />
-                Shipping €19.99
-              </p>
-              <p><b>Total</b> €{{ cartTotal + 19.99 }}</p>
-              <router-link to="/" style="color: black; text-decoration: none">
-                <button
-                  class="btn btn-success"
-                  @click="placeOrder(shoppingCart, cartTotal)"
+            <h5 class="card-title">Invoice Amount</h5>
+            <div class="card-div cartInvoiceTotal">
+              <div>
+                <span>Subtotal</span>
+                <span>€{{ cartTotal }}</span>
+              </div>
+              <div>
+                <span>Shipping</span>
+                <span>€19.99</span>
+              </div>
+              <div>
+                <span id="invoiceGrandTotal">Grand Total</span>
+                <span id="invoiceGrandTotalAmount"
+                  >€{{ cartTotal + 19.99 }}</span
                 >
-                  Buy now
-                </button>
-              </router-link>
+              </div>
+              <div class="cartBuyNow">
+                <router-link to="/" style="color: black; text-decoration: none">
+                  <button
+                    class="btn btn-success"
+                    @click="placeOrder(shoppingCart, cartTotal)"
+                  >
+                    Buy now
+                  </button>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -155,42 +175,80 @@ const placeOrder = async (shoppingCart, orderTotal) => {
 @import "../assets/sass";
 
 .cartHeader {
-  .cartSteps {
+  margin-top: 30px;
+
+  .cartNav {
+    padding-left: 0;
+  }
+
+  .cartSteps3 {
     @include displayFlex(row);
 
     .cartStep {
       @include displayFlex(row);
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       background-color: #e0e0e0;
 
+      span {
+        margin-right: 10px;
+        margin-left: 20px;
+        width: 30px;
+        padding-top: 5px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
       p {
         margin: 0;
+        font-size: 14px;
+        font-weight: bold;
       }
-    }
 
-    .cartStep::after {
-      content: " ";
-      width: 0;
-      height: 0;
-      border-top: 37px solid transparent;
-      border-left: 50px solid #c6c6c6;
-      border-bottom: 25px solid transparent;
+      &:nth-child(1),
+      &:nth-child(2) {
+        background-color: #f5f5f5;
+        opacity: 0.7;
+      }
     }
   }
 }
 
 .cartHeading {
+  @include displayFlex(row);
+  justify-content: space-between;
   margin-top: 30px;
+  padding: 10px 0;
   background-color: #e0e0e0;
+
+  div {
+    width: fit-content;
+  }
+
+  .cartName {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .cartSummary {
   margin-top: 50px;
   margin-bottom: 30px;
+
   .shoppingItems {
     .shoppingItemsWrapper {
       @include displayFlex(row);
+      font-weight: bold;
+
+      &:first-child {
+        span {
+          margin-left: 85px;
+        }
+      }
     }
     .shoppingItem {
       @include displayFlex(row);
@@ -216,21 +274,68 @@ const placeOrder = async (shoppingCart, orderTotal) => {
   .addressPayment {
     .card {
       border: 0;
+      margin-bottom: 20px;
       .card-body {
         padding: 0;
 
         .card-title {
           font-size: 16px;
           font-weight: 600;
-          background-color: #cbcbcb;
+          background-color: #e0e0e0;
           padding: 5px 10px;
           height: 30px;
+          margin-bottom: 0;
+        }
+
+        .card-div {
+          border: 1px solid #eee;
+          padding: 5px 0 10px 10px;
+
+          p {
+            margin-bottom: 0;
+          }
         }
 
         img {
           width: 95px;
           height: auto;
           padding: 10px 15px;
+        }
+      }
+    }
+
+    .cartInvoiceTotal {
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      #invoiceGrandTotal {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      #invoiceGrandTotalAmount {
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .cartBuyNow {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0;
+
+        .btn-success {
+          width: 200px;
+          height: 45px;
+          border-radius: 0;
+          background-color: #cee28e;
+          border: none;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 10px 0 -10px 0;
         }
       }
     }

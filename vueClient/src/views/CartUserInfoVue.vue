@@ -6,7 +6,7 @@
           <img src="../img/tennisshop-logo.svg" alt="brand" />
         </a>
       </div>
-      <div class="col-5 offset-4 cartSteps">
+      <div class="col-5 offset-4 cartSteps2">
         <div class="col-3 cartStep">
           <span>1</span>
           <p>Cart</p>
@@ -89,7 +89,7 @@
           <div class="card-body">
             <h5 class="card-title">Shipping Address</h5>
             <div>
-              <p>
+              <p id="cartAdressWrapper">
                 {{ user?.name }} <br />
                 {{ user?.address.street }}, {{ user?.address.apartmentNo }}
                 <br />
@@ -141,7 +141,7 @@ const { user } = storeToRefs(store);
     padding-left: 0;
   }
 
-  .cartSteps {
+  .cartSteps2 {
     @include displayFlex(row);
 
     .cartStep {
@@ -169,7 +169,7 @@ const { user } = storeToRefs(store);
         font-weight: bold;
       }
 
-      &:nth-child(1),
+      &:first-child,
       &:nth-child(3) {
         background-color: #f5f5f5;
         opacity: 0.7;
@@ -216,6 +216,7 @@ const { user } = storeToRefs(store);
         background-color: #e0e0e0;
         padding: 5px 10px;
         height: 30px;
+        margin-bottom: 0;
       }
     }
   }
@@ -224,6 +225,8 @@ const { user } = storeToRefs(store);
     padding-left: 0;
 
     .paymentMethods {
+      border: 1px solid #eee;
+      padding: 5px 0 27px 10px;
       .form-check {
         display: flex;
         align-items: center;
@@ -262,6 +265,16 @@ const { user } = storeToRefs(store);
   }
 
   .cartAddress {
+    #cartAdressWrapper {
+      border: 1px solid #eee;
+      padding: 5px 0 10px 10px;
+    }
+
+    .shippingProviders {
+      border: 1px solid #eee;
+      padding: 5px 0 10px 10px;
+    }
+
     a {
       display: flex;
       justify-content: flex-end;
