@@ -1,32 +1,43 @@
 <template>
   <div class="container">
     <div class="row cartHeader">
-      <div class="col-3">
+      <div class="col-3 cartNav">
         <a href="/">
           <img src="../img/tennisshop-logo.svg" alt="brand" />
         </a>
       </div>
-      <div class="col-6 offset-3 cartSteps">
-        <div class="col-4 cartStep"><p>Cart</p></div>
-        <div class="col-4 cartStep"><p>My data & Payment</p></div>
-        <div class="col-4 cartStep"><p>Check & Order</p></div>
+      <div class="col-5 offset-4 cartSteps">
+        <div class="col-3 cartStep">
+          <span>1</span>
+          <p>Cart</p>
+        </div>
+        <div class="col-5 cartStep">
+          <span>2</span>
+          <p>My data & Payment</p>
+        </div>
+        <div class="col-4 cartStep">
+          <span>3</span>
+          <p>Check & Order</p>
+        </div>
       </div>
     </div>
     <div class="row cartHeading">
-      <div>My Cart</div>
-      <div v-if="shoppingCart?.length === 1">
-        {{ shoppingCart?.length }} item in shopping cart
+      <div class="cartName">My Cart</div>
+      <div class="cartQuantity" v-if="shoppingCart?.length === 1">
+        ({{ shoppingCart?.length }} item in shopping cart)
       </div>
-      <div v-else>{{ shoppingCart?.length }} items in shopping cart</div>
+      <div class="cartQuantity" v-else>
+        ({{ shoppingCart?.length }} items in shopping cart)
+      </div>
     </div>
     <div class="row shoppingItems">
       <div class="col-12 shoppingItemsWrapper" v-if="shoppingCart?.length > 0">
-        <div class="col-3 offset-1"><h5>Article</h5></div>
-        <div class="col-2"><h5>Size</h5></div>
-        <div class="col-3"><h5>Quantity</h5></div>
-        <div class="col-1"><h5>Price</h5></div>
-        <div class="col-1"><h5>Total</h5></div>
-        <div class="col-1"><h5>Remove</h5></div>
+        <div class="col-4"><h6>Article</h6></div>
+        <div class="col-2"><h6>Size</h6></div>
+        <div class="col-3"><h6>Quantity</h6></div>
+        <div class="col-1"><h6>Price</h6></div>
+        <div class="col-1"><h6>Total</h6></div>
+        <div class="col-1"><h6>Remove</h6></div>
       </div>
 
       <hr />
@@ -76,7 +87,7 @@
     <div class="row cartFinalInfo">
       <div class="col-12 order-last col-md-6 order-md-first">
         <div class="col cartDelivery">
-          <h5>Delivery</h5>
+          <h6>Delivery</h6>
           <p>Delivery time: 5 - 6 days.</p>
         </div>
         <div class="col cartPayment">
@@ -94,20 +105,34 @@
           </div>
         </div>
       </div>
-      <div class="col-12 order-first col-md-6 order-md-last">
+      <div
+        class="col-12 order-first col-md-6 order-md-last cartTotalCalculation"
+      >
         <div class="cartTotal">
-          <p>Total products (incl. tax) € {{ cartTotal }}</p>
-          <p>Shipping costs € 0.00</p>
+          <div>
+            <span>Total products (incl. tax)</span>
+            <span>€ {{ cartTotal }}</span>
+          </div>
+          <div>
+            <span>Shipping costs</span>
+            <span>€ 0</span>
+          </div>
         </div>
         <div class="cartGrandTotal">
-          <p>Grand total (incl. VAT) € {{ cartTotal }}</p>
+          <span
+            ><span id="headerGrandTotal">Grand total</span> <br />
+            (incl. VAT)</span
+          >
+          <span id="headerCartTotal">€ {{ cartTotal }}</span>
         </div>
-        <router-link
-          to="/cartUserInfo"
-          style="color: black; text-decoration: none"
-        >
-          <button class="btn btn-success">Go to checkout</button>
-        </router-link>
+        <div class="cartGoToCheckout">
+          <router-link
+            to="/cartUserInfo"
+            style="color: black; text-decoration: none"
+          >
+            <button class="btn btn-success">Go to checkout</button>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -142,27 +167,45 @@ const removeShopItem = (id) => {
 @import "../assets/sass";
 
 .cartHeader {
+  margin-top: 30px;
+
+  .cartNav {
+    padding-left: 0;
+  }
+
   .cartSteps {
     @include displayFlex(row);
 
     .cartStep {
       @include displayFlex(row);
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       background-color: #e0e0e0;
 
+      span {
+        margin-right: 10px;
+        margin-left: 20px;
+        width: 30px;
+        padding-top: 5px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
       p {
         margin: 0;
+        font-size: 14px;
+        font-weight: bold;
       }
-    }
 
-    .cartStep::after {
-      content: " ";
-      width: 0;
-      height: 0;
-      border-top: 37px solid transparent;
-      border-left: 50px solid #c6c6c6;
-      border-bottom: 25px solid transparent;
+      &:nth-child(2),
+      &:nth-child(3) {
+        background-color: #f5f5f5;
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -171,10 +214,20 @@ const removeShopItem = (id) => {
   @include displayFlex(row);
   justify-content: space-between;
   margin-top: 30px;
+  padding: 10px 0;
   background-color: #e0e0e0;
 
   div {
     width: fit-content;
+  }
+
+  .cartName {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .cartQuantity {
+    font-size: 14px;
   }
 }
 
@@ -183,6 +236,18 @@ const removeShopItem = (id) => {
   margin-bottom: 30px;
   .shoppingItemsWrapper {
     @include displayFlex(row);
+
+    div h6 {
+      font-weight: bold;
+    }
+
+    div {
+      &:first-child {
+        h6 {
+          margin-left: 73px;
+        }
+      }
+    }
   }
 
   .shoppingItem {
@@ -194,9 +259,11 @@ const removeShopItem = (id) => {
 
     .shoppingArticle {
       @include displayFlex(row);
+      align-items: center;
 
       .articleName {
         @include displayFlex(column);
+        padding-left: 10px;
       }
 
       img {
@@ -204,14 +271,32 @@ const removeShopItem = (id) => {
         height: 85px;
       }
     }
+
+    .btn-secondary {
+      padding-top: 0;
+      color: #444444;
+      background-color: white;
+      border: none;
+      font-weight: 900;
+      font-size: 22px;
+    }
   }
 }
 
 .cartFinalInfo {
   .cartDelivery {
     background-color: #fafafa;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding: 10px 0 30px 10px;
+    border: 1px solid #eee;
+
+    h6 {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 
   .cartPayment {
@@ -223,9 +308,8 @@ const removeShopItem = (id) => {
         .card-title {
           font-size: 16px;
           font-weight: 600;
-          background-color: #cbcbcb;
-          padding: 5px 10px;
-          height: 30px;
+          background-color: #e0e0e0;
+          padding: 10px 10px;
         }
 
         .paymentMethods {
@@ -237,6 +321,57 @@ const removeShopItem = (id) => {
           height: auto;
           padding: 10px 15px;
         }
+      }
+    }
+  }
+
+  .cartTotalCalculation {
+    .cartTotal,
+    .cartGrandTotal,
+    .cartGoToCheckout {
+      margin-left: 100px;
+    }
+
+    .cartTotal {
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+    }
+
+    .cartGrandTotal {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fafafa;
+      border: 1px solid #eee;
+      padding: 7px 10px;
+      margin-bottom: 20px;
+
+      #headerGrandTotal {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      #headerCartTotal {
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    .cartGoToCheckout {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn-success {
+        width: 200px;
+        height: 45px;
+        border-radius: 0;
+        background-color: #cee28e;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
       }
     }
   }
