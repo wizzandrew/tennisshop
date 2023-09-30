@@ -1,22 +1,31 @@
 <template>
   <div class="container">
     <div class="row cartHeader">
-      <div class="col-3">
+      <div class="col-3 cartNav">
         <a href="/">
           <img src="../img/tennisshop-logo.svg" alt="brand" />
         </a>
       </div>
-      <div class="col-6 offset-3 cartSteps">
-        <div class="col-4 cartStep"><p>Cart</p></div>
-        <div class="col-4 cartStep"><p>My data & Payment</p></div>
-        <div class="col-4 cartStep"><p>Check & Order</p></div>
+      <div class="col-5 offset-4 cartSteps">
+        <div class="col-3 cartStep">
+          <span>1</span>
+          <p>Cart</p>
+        </div>
+        <div class="col-5 cartStep">
+          <span>2</span>
+          <p>My data & Payment</p>
+        </div>
+        <div class="col-4 cartStep">
+          <span>3</span>
+          <p>Check & Order</p>
+        </div>
       </div>
     </div>
     <div class="row cartHeading">
-      <div>My Payment & Address</div>
+      <div class="cartName">My Payment & Address</div>
     </div>
     <div class="row cartPaymentAdress">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 cartPayment">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Select payment method</h5>
@@ -51,28 +60,31 @@
                 <img src="../img/cards-visa.svg" alt="visa" />
                 <img src="../img/cards-master.svg" alt="master" />
               </div>
+
               <div class="userPaymentMethod">
-                <p>
-                  Last 4 digits:
-                  {{ user?.paymentMethod.number.toString().substr(-4) }}
-                </p>
-                <div class="paymentMethodInfo">
-                  <div>
-                    <span>Name: </span>
-                    <span>{{ user?.name }}</span>
+                <div class="paymentWrapper">
+                  <p>
+                    Last 4 digits:
+                    {{ user?.paymentMethod.number.toString().substr(-4) }}
+                  </p>
+                  <div class="paymentMethodInfo">
+                    <div>
+                      <span>Name: </span>
+                      <span>{{ user?.name }}</span>
+                    </div>
+                    <div>
+                      <span>Valid through: </span>
+                      <span>{{ user?.paymentMethod.valid.slice(5, 10) }}</span>
+                    </div>
+                    <img src="../img/cards-master2.png" alt="master" />
                   </div>
-                  <div>
-                    <span>Valid till: </span>
-                    <span>{{ user?.paymentMethod.valid.slice(5, 10) }}</span>
-                  </div>
-                  <img src="../img/cards-master.svg" alt="master" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 cartAddress">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Shipping Address</h5>
@@ -123,39 +135,75 @@ const { user } = storeToRefs(store);
 @import "../assets/sass";
 
 .cartHeader {
+  margin-top: 30px;
+
+  .cartNav {
+    padding-left: 0;
+  }
+
   .cartSteps {
     @include displayFlex(row);
 
     .cartStep {
       @include displayFlex(row);
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       background-color: #e0e0e0;
 
+      span {
+        margin-right: 10px;
+        margin-left: 20px;
+        width: 30px;
+        padding-top: 5px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
       p {
         margin: 0;
+        font-size: 14px;
+        font-weight: bold;
       }
-    }
 
-    .cartStep::after {
-      content: " ";
-      width: 0;
-      height: 0;
-      border-top: 37px solid transparent;
-      border-left: 50px solid #c6c6c6;
-      border-bottom: 25px solid transparent;
+      &:nth-child(1),
+      &:nth-child(3) {
+        background-color: #f5f5f5;
+        opacity: 0.7;
+      }
     }
   }
 }
 
 .cartHeading {
+  @include displayFlex(row);
+  justify-content: space-between;
   margin-top: 30px;
+  padding: 10px 0;
   background-color: #e0e0e0;
+
+  div {
+    width: fit-content;
+  }
+
+  .cartName {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .cartPaymentAdress {
-  margin-top: 75px;
+  margin-top: 50px;
   margin-bottom: 100px;
+
+  img {
+    width: 95px;
+    height: auto;
+    padding: 10px 15px;
+  }
 
   .card {
     border: 0;
@@ -165,31 +213,68 @@ const { user } = storeToRefs(store);
       .card-title {
         font-size: 16px;
         font-weight: 600;
-        background-color: #cbcbcb;
+        background-color: #e0e0e0;
         padding: 5px 10px;
         height: 30px;
       }
+    }
+  }
 
-      img {
-        width: 95px;
-        height: auto;
-        padding: 10px 15px;
+  .cartPayment {
+    padding-left: 0;
+
+    .paymentMethods {
+      .form-check {
+        display: flex;
+        align-items: center;
+
+        label {
+          margin-left: 10px;
+        }
       }
 
-      .paymentMethods {
-        .userPaymentMethod {
+      .userPaymentMethod {
+        margin-top: 20px;
+
+        .paymentWrapper {
+          max-width: 310px;
+          min-width: 250px;
           background-image: linear-gradient(
             rgb(172, 190, 224),
             rgb(83, 133, 225)
           );
+          border-radius: 5px;
           color: white;
           padding: 10px 10px 0 10px;
-          margin-top: 30px;
 
-          img {
-            margin-left: 358px;
+          .paymentMethodInfo {
+            @include displayFlex(column);
+
+            img {
+              display: flex;
+              align-self: flex-end;
+              padding: 0;
+            }
           }
         }
+      }
+    }
+  }
+
+  .cartAddress {
+    a {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn-success {
+        margin-top: 12px;
+        width: 200px;
+        height: 45px;
+        border-radius: 0;
+        background-color: #cee28e;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
       }
     }
   }
